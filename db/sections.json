@@ -1,0 +1,56 @@
+{
+  "data": {
+   "hero": {
+      "id": 0,
+      "title": "Web Developer",
+      "subtitle": "Franger Centeno",
+      "summary": "Soy un Web Developer con más de 3 años de experiencias creando aplicaciones web. Tengo amplio conocimiento con JavaScript y frameworks como React del lado FrontEnd y Express y Node.js en el BackEnd.",
+      "images": [
+        {
+          "name": "javascript",
+          "path": "img/javascript.svg",
+          "id": 0
+        },
+        {
+          "name": "nodejs",
+          "path": "img/nodejs-icon.svg",
+          "id": 1
+        },
+        {
+          "name": "react",
+          "path": "img/react.svg",
+          "id": 2
+        },
+        {
+          "name": "vue",
+          "path": "img/vue.svg",
+          "id": 3
+        },
+        {
+          "name": "grahpql",
+          "path": "img/graphql.svg",
+          "id": 4
+        },
+        {
+          "name": "typescript",
+          "path": "img/graphql.svg",
+          "id": 5
+        }
+      ]
+    },
+   "experience": {
+      "id": 1,
+      "title": "Experiencia",
+      "subtitle": "",
+      "summary": "Te quiero comentar sobre algunas de las empresas o proyectos que han aportado a mi crecimiento como prefesional.",
+      "images": []
+    },
+    "readme" : {
+      "id": 1,
+      "title": "Léeme",
+      "subtitle": "",
+      "summary": "Me gusta escribir sobre las tecnologías que conozco y lo que aprendo de ellas, para que tú tambien puedas aprender.",
+      "images": []
+    }
+  }
+}
