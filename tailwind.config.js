@@ -1,10 +1,9 @@
 module.exports = {
   future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
+    // removeDeprecatedGapUtilities: true,
+    // purgeLayersByDefault: true,
   },
-  enabled: process.env.NODE_ENV === 'production',
-  purge: [],
+  purge: false,
   theme: {
     colors: {
       primary: {
