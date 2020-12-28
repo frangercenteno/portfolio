@@ -3,8 +3,6 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import data from '../db/routes_navigation.json';
 
-console.log(data)
-
 const { routes } = data;
 
 const ListMenu = styled.ul<{ toggleList: boolean }>`
