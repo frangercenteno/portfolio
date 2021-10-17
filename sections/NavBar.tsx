@@ -20,8 +20,8 @@ const NavBar = () => {
 
   return (
     <nav className="bg-secondary-default">
-      <div className="container md:flex md:justify-between md:items-center py-2">
-        <div className="flex justify-between items-center">
+      <div className="max-w-3xl m-auto md:flex md:justify-between md:items-center py-2">
+        <div className="flex justify-between items-center ">
           <Link href="/">
             <a className="w-1/4 md:w-1/2 cursor-pointer">
               <Image
