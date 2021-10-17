@@ -35,6 +35,11 @@
           "name": "typescript",
           "path": "/img/typescript.svg",
           "id": 5
+        },
+        {
+          "name": "nextjs",
+          "path": "/img/next-js.svg",
+          "id": 5
         }
       ]
     },

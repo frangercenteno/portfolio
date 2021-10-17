@@ -19,7 +19,7 @@
       {
         "id": 3,
         "name": "TypeScript",
-        "image": "/img/javascript.svg"
+        "image": "/img/typescript.svg"
       },
       {
         "id": 4,
@@ -30,6 +30,11 @@
         "id": 5,
         "name": "GraphQL",
         "image": "/img/graphql.svg"
+      },
+      {
+        "id": 6,
+        "name": "Next.js",
+        "image": "/img/next-js.svg"
       }
     ],
     "articles": [
