@@ -7,10 +7,7 @@ import TitleSection from "@/components/TitleSection";
 import data from "db/articles.json";
 const { articles, categories } = data.data;
 
-interface ReadMeProps {
-  title: string;
-  summary: string;
-}
+interface ReadMeProps {}
 
 const ReadMe: FC<ReadMeProps> = () => {
   if (articles.length === 0) {
