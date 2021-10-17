@@ -23,7 +23,7 @@ const NavBar = () => {
       <div className="container md:flex md:justify-between md:items-center py-2">
         <div className="flex justify-between items-center">
           <Link href="/">
-            <a href="/" className="w-1/4 md:w-1/2 cursor-pointer">
+            <a className="w-1/4 md:w-1/2 cursor-pointer">
               <Image
                 src="/preferente-logo-bl-wh_1.svg"
                 width={280}

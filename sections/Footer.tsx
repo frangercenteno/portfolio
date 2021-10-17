@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <div className="bg-secondary-default py-12">
@@ -15,11 +17,15 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/franger-centeno/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative w-full h-full block"
               >
-                <img
-                  src="img/social_media/linkedin.svg"
+                <Image
+                  src="/img/social_media/linkedin.svg"
                   alt="linkenid"
                   className="w-full h-full"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                 />
               </a>
             </div>
@@ -28,11 +34,15 @@ const Footer = () => {
                 href="https://www.instagram.com/franger.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative  w-full h-full block"
               >
-                <img
-                  src="img/social_media/instagram.svg"
+                <Image
+                  src="/img/social_media/instagram.svg"
                   alt="instagram"
                   className="w-full h-full"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                 />
               </a>
             </div>
@@ -41,11 +51,15 @@ const Footer = () => {
                 href="https://twitter.com/frangerdev"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative  w-full h-full block"
               >
-                <img
-                  src="img/social_media/twitter.svg"
+                <Image
+                  src="/img/social_media/twitter.svg"
                   alt="twitter"
                   className="w-full h-full"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                 />
               </a>
             </div>
@@ -54,11 +68,15 @@ const Footer = () => {
                 href="https://github.com/frangercenteno"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative  w-full h-full block"
               >
-                <img
-                  src="img/social_media/github.svg"
+                <Image
+                  src="/img/social_media/github.svg"
                   alt="github"
                   className="w-full h-full"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
                 />
               </a>
             </div>

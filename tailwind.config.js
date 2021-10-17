@@ -1,28 +1,31 @@
 module.exports = {
-  purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}", "./sections/**/*.{js,ts,jsx,tsx}"],
+  purge: [
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./sections/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: false,
   theme: {
     colors: {
       primary: {
         lighter: "#C0FFFB",
         default: "#00FFF0",
-        dark: "#00FFF0"
+        dark: "#277E78",
       },
       secondary: {
         lighter: "#ffffff",
         default: "#141616",
-        dark: "#ededed"
+        dark: "#ededed",
       },
     },
     container: {
       padding: "2rem",
-      center: true
+      center: true,
     },
-    extends: {
-    }
+    extends: {},
   },
   variants: {
-    extend: {}
+    extend: {},
   },
   plugins: [],
-}
+};

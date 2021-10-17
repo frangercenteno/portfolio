@@ -1,4 +1,11 @@
 import { FC } from "react";
+import styled from "styled-components";
+
+const ItemsExperienceWrapper = styled.div`
+  @media (min-width: 758px) {
+    width: 49%;
+  }
+`;
 
 interface ItemsExperienceProps {
   company: string;
@@ -12,22 +19,19 @@ const ItemsExperience: FC<ItemsExperienceProps> = ({
   summary,
 }) => {
   return (
-    <div className="flex mb-16">
-      <div className="flex-1">
-        <div className="bg-primary-default w-8 h-8 rounded-full"></div>
-      </div>
-      <div className="flex-auto pl-2">
-        <h3 className="text-base text-secondary-primary font-bold leading-1 border-b border-secondary-dark">
+    <ItemsExperienceWrapper className="my-1 w-full lg:my-4 bg-primary-lighter">
+      <div className="flex-auto">
+        <h3 className="text-base text-secondary-default font-bold p-2 md:p-4">
           {company}
         </h3>
-        <h4 className="text-sm text-secondary-primary font-normal">
+        <h4 className="text-sm text-secondary-default font-normal px-2 md:px-4">
           {titleJob}
         </h4>
-        <p className="text-xs text-secondary-primary font-thin leading-1 hidden md:block">
+        <p className="text-xs text-secondary-default font-thin leading-1 p-2 md:p-4">
           {summary}
         </p>
       </div>
-    </div>
+    </ItemsExperienceWrapper>
   );
 };
 

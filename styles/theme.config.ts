@@ -9,8 +9,4 @@ export const GlobalStyles = createGlobalStyle`
     .header-main {
         height: 100%;
     }
-
-    .experience-container {
-        max-width: 500px;
-    }
 `;

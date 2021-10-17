@@ -39,22 +39,18 @@
         {
           "name": "nextjs",
           "path": "/img/next-js.svg",
-          "id": 5
+          "id": 6
         }
       ]
     },
     "experience": {
       "id": 1,
       "title": "Experiencia",
-      "subtitle": "",
-      "summary": "Te quiero comentar sobre algunas de las empresas o proyectos que han aportado a mi crecimiento como prefesional.",
       "images": []
     },
     "readme": {
       "id": 1,
       "title": "Léeme",
-      "subtitle": "",
-      "summary": "Me gusta escribir sobre las tecnologías que conozco y lo que aprendo de ellas, para que tú tambien puedas aprender.",
       "images": []
     }
   }

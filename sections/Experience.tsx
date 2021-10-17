@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Link from "next/link";
 
 import TitleSection from "@/components/TitleSection";
 import ItemsExperience from "@/components/ItemsExperience";
@@ -9,24 +10,35 @@ const experienceData = data.data;
 
 interface ExperienceProps {
   title: string;
-  summary: string;
 }
 
-const Experience: FC<ExperienceProps> = ({ title, summary }) => {
+const Experience: FC<ExperienceProps> = ({ title }) => {
   return (
-    <div className="bg-primary-lighter py-16" id="experience">
+    <div className="bg-secondary-default py-16" id="experience">
       <div className="container">
-        <TitleSection title={title} subTitle={summary} />
+        <TitleSection title={title} isDark />
 
-        <div className="bg-secondary-lighter experience-container p-8 md:p-12 mx-auto shadow-md">
-          {experienceData.map(({ id, company, job, jobDescription }) => (
-            <ItemsExperience
-              key={id}
-              company={company}
-              titleJob={job}
-              summary={jobDescription}
-            />
-          ))}
+        <div className="mx-auto shadow-md max-w-3xl flex flex-wrap justify-between">
+          {experienceData
+            .slice(0, 2)
+            .map(({ id, company, job, jobDescription }) => (
+              <ItemsExperience
+                key={id}
+                company={company}
+                titleJob={job}
+                summary={jobDescription}
+              />
+            ))}
+        </div>
+        <div className="text-center mt-6">
+          <Link href="/blog">
+            <a
+              href="/blog"
+              className="text-primary-default text-base hover:text-secondary-lighter"
+            >
+              Ver más
+            </a>
+          </Link>
         </div>
       </div>
     </div>

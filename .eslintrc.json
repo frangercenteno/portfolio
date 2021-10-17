@@ -13,8 +13,7 @@
     "no-unused-vars": [
       "error",
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
-    ],
-    "allowSingleLine": true
+    ]
   },
   "parserOptions": {
     "ecmaFeatures": {

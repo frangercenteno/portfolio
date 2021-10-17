@@ -19,13 +19,9 @@ const ReadMe: FC<ReadMeProps> = () => {
 
   return (
     <div className="pt-16 bg-secondary-default">
-      <TitleSection
-        isDark
-        title="Léeme"
-        subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia commodo ullamcorper."
-      />
-      <div className="container mx-auto px-4 md:px-12">
-        <div className="flex flex-wrap -mx-1 lg:-mx-4">
+      <div className="container mx-auto">
+        <TitleSection isDark title="Léeme" />
+        <div className="flex flex-wrap max-w-2xl m-auto">
           {articles.slice(0, 3).map((item) => (
             <CardArticle key={item.id} {...item} categories={categories} />
           ))}
