@@ -7,7 +7,7 @@ import data from "db/experience.json"
 
 const experienceData = data.data;
 
-type ExperienceProps = {
+interface ExperienceProps {
   title: string;
   summary: string;
 };

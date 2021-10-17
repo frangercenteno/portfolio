@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-type TitleSectionProp = {
+interface TitleSectionProp {
   isDark?: boolean;
   title: string;
   subTitle: string;

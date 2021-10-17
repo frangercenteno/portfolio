@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-type HeroProps = {
+interface HeroProps {
   title: string;
   subtitle: string;
   summary: string;

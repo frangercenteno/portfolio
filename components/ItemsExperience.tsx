@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-type ItemsExperienceProps = {
+interface ItemsExperienceProps {
   company: string;
   titleJob: string;
   summary: string;

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Link from "next/link";
 
-type CardArticleProps = {
+interface CardArticleProps {
   categories: {
     id: number;
     name: string;

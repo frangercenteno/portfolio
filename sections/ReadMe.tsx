@@ -7,7 +7,7 @@ import TitleSection from "@/components/TitleSection";
 import data from "db/articles.json";
 const { articles, categories } = data.data;
 
-type ReadMeProps = {
+interface ReadMeProps {
   title: string;
   summary: string;
 };
@@ -32,7 +32,7 @@ const ReadMe: FC<ReadMeProps> = () => {
         </div>
         <div className="text-center mt-6">
           <Link href="/blog">
-            <a className="text-primary-default text-base hover:text-secondary-lighter">Ver más</a>
+            <a href="/blog" className="text-primary-default text-base hover:text-secondary-lighter">Ver más</a>
           </Link>
         </div>
       </div>
