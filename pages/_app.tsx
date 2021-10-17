@@ -1,8 +1,8 @@
-import "tailwindcss/tailwind.css"
+import "tailwindcss/tailwind.css";
 import { GlobalStyles } from "styles/theme.config";
 
 // import App from "next/app";
-import type { AppProps /*, AppContext */ } from "next/app"
+import type { AppProps /*, AppContext */ } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Component {...pageProps} />
     </>
-    )
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -25,4 +25,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default MyApp;

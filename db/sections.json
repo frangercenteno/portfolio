@@ -1,6 +1,6 @@
 {
   "data": {
-   "hero": {
+    "hero": {
       "id": 0,
       "title": "Web Developer",
       "subtitle": "Franger Centeno",
@@ -8,44 +8,44 @@
       "images": [
         {
           "name": "javascript",
-          "path": "img/javascript.svg",
+          "path": "/img/javascript.svg",
           "id": 0
         },
         {
           "name": "nodejs",
-          "path": "img/nodejs-icon.svg",
+          "path": "/img/nodejs-icon.svg",
           "id": 1
         },
         {
           "name": "react",
-          "path": "img/react.svg",
+          "path": "/img/react.svg",
           "id": 2
         },
         {
           "name": "vue",
-          "path": "img/vue.svg",
+          "path": "/img/vue.svg",
           "id": 3
         },
         {
           "name": "grahpql",
-          "path": "img/graphql.svg",
+          "path": "/img/graphql.svg",
           "id": 4
         },
         {
           "name": "typescript",
-          "path": "img/typescript.svg",
+          "path": "/img/typescript.svg",
           "id": 5
         }
       ]
     },
-   "experience": {
+    "experience": {
       "id": 1,
       "title": "Experiencia",
       "subtitle": "",
       "summary": "Te quiero comentar sobre algunas de las empresas o proyectos que han aportado a mi crecimiento como prefesional.",
       "images": []
     },
-    "readme" : {
+    "readme": {
       "id": 1,
       "title": "Léeme",
       "subtitle": "",

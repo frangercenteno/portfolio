@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CardArticleProps {
   categories: {
@@ -28,8 +29,11 @@ const CardArticle: FC<CardArticleProps> = ({
   const category = categories.find((category) => category.id === id_category);
 
   return (
-    <Link href={path}>
-      <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 cursor-pointer hover:opacity-75 duration-100">
+    <Link href={path} passHref>
+      <a
+        href={path}
+        className="block my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 cursor-pointer hover:opacity-75 duration-100"
+      >
         <article className="overflow-hidden rounded-lg shadow-lg bg-secondary-lighter">
           <img alt={title} className="block h-auto w-full" src={image} />
 
@@ -46,16 +50,19 @@ const CardArticle: FC<CardArticleProps> = ({
 
           <footer className="flex items-center justify-between leading-none p-2 md:p-4">
             <div className="flex items-center text-black">
-              <img
+              <Image
                 alt={category?.name}
                 className="block rounded-full w-10 h-10"
-                src={category?.image}
+                src={category?.image || ""}
+                layout="intrinsic"
+                width={30}
+                height={30}
               />
               <p className="ml-2 text-sm">{category?.name}</p>
             </div>
           </footer>
         </article>
-      </div>
+      </a>
     </Link>
   );
 };
