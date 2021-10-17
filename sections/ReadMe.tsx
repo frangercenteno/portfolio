@@ -18,7 +18,7 @@ const ReadMe: FC<ReadMeProps> = () => {
   }
 
   return (
-    <div className='pt-16 bg-secondary'>
+    <div className='pt-16 bg-secondary-default'>
       <TitleSection
         isDark
         title='Léeme'
@@ -32,7 +32,7 @@ const ReadMe: FC<ReadMeProps> = () => {
         </div>
         <div className='text-center mt-6'>
           <Link href='/blog'>
-            <a className='text-primary text-base hover:text-secondary-lighter'>Ver más</a>
+            <a className='text-primary-default text-base hover:text-secondary-lighter'>Ver más</a>
           </Link>
         </div>
       </div>

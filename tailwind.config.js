@@ -1,9 +1,6 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}', './sections/**/*.{js,ts,jsx,tsx}'],
+  darkMode: false,
   theme: {
     colors: {
       primary: {
@@ -21,7 +18,11 @@ module.exports = {
       padding: '2rem',
       center: true
     },
+    extends: {
+    }
   },
-  variants: {},
+  variants: {
+    extend: {}
+  },
   plugins: [],
 }

@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <div className="bg-secondary py-12">
+    <div className="bg-secondary-default py-12">
       <div className="container">
-        <div className="text-center border-t border-primary py-12">
-          <a className="text-primary text-base" href="mailto:me@franger.dev">
+        <div className="text-center border-t border-primary-default py-12">
+          <a className="text-primary-default text-base" href="mailto:me@franger.dev">
             me@franger.dev
           </a>
           <div className="flex justify-center items-center mt-2">

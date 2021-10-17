@@ -18,11 +18,11 @@ const Hero: FC<HeroProps> = ({
   images,
 }) => {
   return (
-    <div className="bg-secondary header-main">
+    <div className="bg-secondary-default header-main">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 pt-10">
           <div className="md:mt-20 lg:mt-40 lg:max-w-6xl">
-            <h1 className="text-primary text-3xl md:text-6xl font-bold leading-none">{title}</h1>
+            <h1 className="text-primary-default text-3xl md:text-6xl font-bold leading-none">{title}</h1>
             <h2 className="text-secondary-lighter text-3xl font-bold leading-none md:mt-5">
               {subtitle}
             </h2>

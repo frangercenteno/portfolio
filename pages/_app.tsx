@@ -1,12 +1,16 @@
-import '../styles/globals.css';
-import '../styles/tailwind.css';
-
+import "tailwindcss/tailwind.css"
+import { GlobalStyles } from "styles/theme.config";
 
 // import App from "next/app";
 import type { AppProps /*, AppContext */ } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </>
+    )
 }
 
 // Only uncomment this method if you have blocking data requirements for
