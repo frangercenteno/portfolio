@@ -10,7 +10,7 @@ const { articles, categories } = data.data;
 interface ReadMeProps {
   title: string;
   summary: string;
-};
+}
 
 const ReadMe: FC<ReadMeProps> = () => {
   if (articles.length === 0) {
@@ -32,7 +32,12 @@ const ReadMe: FC<ReadMeProps> = () => {
         </div>
         <div className="text-center mt-6">
           <Link href="/blog">
-            <a href="/blog" className="text-primary-default text-base hover:text-secondary-lighter">Ver más</a>
+            <a
+              href="/blog"
+              className="text-primary-default text-base hover:text-secondary-lighter"
+            >
+              Ver más
+            </a>
           </Link>
         </div>
       </div>

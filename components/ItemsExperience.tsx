@@ -4,7 +4,7 @@ interface ItemsExperienceProps {
   company: string;
   titleJob: string;
   summary: string;
-};
+}
 
 const ItemsExperience: FC<ItemsExperienceProps> = ({
   company,
