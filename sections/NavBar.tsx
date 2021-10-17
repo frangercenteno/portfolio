@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from "next/image";
 import Link from 'next/link';
 import styled from 'styled-components';
 import data from '../db/routes_navigation.json';
@@ -23,11 +24,14 @@ const NavBar = () => {
       <div className='container md:flex md:justify-between md:items-center py-2'>
         <div className="flex justify-between items-center">
         <Link href='/'>
-          <a href="/">
-            <img
+          <a href="/" className='w-1/4 md:w-1/2 cursor-pointer'>
+            <Image
               src='/preferente-logo-bl-wh_1.svg'
+              width={280}
+              height={180}
+              layout="intrinsic"
               alt='Franger Dev'
-              className='w-1/4 md:w-1/2 cursor-pointer'
+              
             />
           </a>
           </Link>
