@@ -30,12 +30,12 @@ const CardArticle: FC<CardArticleProps> = ({
     <Link href={path} passHref>
       <a
         href={path}
-        className="block my-1 px-1 w-full lg:my-4 lg:px-4 cursor-pointer hover:opacity-75 duration-100"
+        className="block my-2 sm:my-1 px-1 w-full lg:my-4 lg:px-4 cursor-pointer hover:opacity-75 duration-100 text-secondary-lighter border-2 border-solid border-primary-default"
       >
-        <article className="overflow-hidden bg-primary-lighter">
+        <article className="overflow-hidden">
           <header className="flex items-center justify-between leading-tight p-2 md:p-4">
             <h1 className="text-lg">
-              <span className=" font-bold">{title}</span>
+              <span className="font-bold">{title}</span>
             </h1>
             <p className="text-grey-darker text-sm">{date}</p>
           </header>

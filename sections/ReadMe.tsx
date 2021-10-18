@@ -18,18 +18,19 @@ const ReadMe: FC<ReadMeProps> = () => {
     <div className="pt-16 bg-secondary-default">
       <div className="container mx-auto">
         <TitleSection isDark title="Léeme" />
-        <div className="flex flex-wrap max-w-2xl m-auto">
+        <div className="flex flex-wrap max-w-3xl m-auto">
           {articles.slice(0, 3).map((item) => (
             <CardArticle key={item.id} {...item} categories={categories} />
           ))}
         </div>
-        <div className="text-center mt-6">
+        <div className="mt-6 max-w-3xl m-auto">
           <Link href="/blog">
             <a
               href="/blog"
-              className="text-primary-default text-base hover:text-secondary-lighter"
+              className="text-secondary-lighter text-base hover:text-secondary-lighter"
             >
-              Ver más
+              Ver más {">"}
+              {">"}
             </a>
           </Link>
         </div>

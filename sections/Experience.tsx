@@ -30,13 +30,14 @@ const Experience: FC<ExperienceProps> = ({ title }) => {
               />
             ))}
         </div>
-        <div className="text-center mt-6">
+        <div className="mt-6 max-w-3xl m-auto">
           <Link href="/blog">
             <a
               href="/blog"
-              className="text-primary-default text-base hover:text-secondary-lighter"
+              className="text-secondary-lighter text-base hover:text-secondary-lighter"
             >
-              Ver más
+              Ver más {">"}
+              {">"}
             </a>
           </Link>
         </div>

@@ -7,10 +7,10 @@ interface TitleSectionProp {
 
 const TitleSection: FC<TitleSectionProp> = ({ isDark, title }) => {
   return (
-    <div className="max-w-3xl m-auto mb-16">
+    <div className="max-w-3xl m-auto mb-2">
       <h2
         className={`${
-          isDark ? "text-primary-default" : "text-secondary-default"
+          isDark ? "text-secondary-lighter" : "text-secondary-default"
         } font-bold text-2xl`}
       >
         {title}

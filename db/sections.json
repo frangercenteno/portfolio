@@ -2,8 +2,8 @@
   "data": {
     "hero": {
       "id": 0,
-      "title": "Web Developer",
-      "subtitle": "Franger Centeno",
+      "title": "Franger Centeno",
+      "subtitle": "Front End Developer",
       "summary": "Soy un Web Developer con más de 3 años de experiencias creando aplicaciones web. Tengo amplio conocimiento con JavaScript y frameworks como React del lado FrontEnd y Express y Node.js en el BackEnd.",
       "images": [
         {
