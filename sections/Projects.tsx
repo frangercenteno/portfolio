@@ -2,31 +2,30 @@ import { FC } from "react";
 import Link from "next/link";
 
 import TitleSection from "@/components/TitleSection";
-import ItemsExperience from "@/components/ItemsExperience";
+import ItemsProject from "@/components/ItemsProject";
 
-import data from "db/experience.json";
+import { projects } from "../constants";
 
-const experienceData = data.data;
+interface ExperienceProps {}
 
-interface ExperienceProps {
-  title: string;
-}
-
-const Experience: FC<ExperienceProps> = ({ title }) => {
+const Experience: FC<ExperienceProps> = () => {
   return (
     <div className="bg-secondary-default py-16" id="experience">
       <div className="container">
-        <TitleSection title={title} isDark />
+        <TitleSection title="Projects" isDark />
 
         <div className="mx-auto shadow-md max-w-3xl flex flex-wrap justify-between">
-          {experienceData
+          {projects
             .slice(0, 2)
-            .map(({ id, company, job, jobDescription }) => (
-              <ItemsExperience
+            .map(({ id, name, age, description, technologies, url }) => (
+              <ItemsProject
                 key={id}
-                company={company}
-                titleJob={job}
-                summary={jobDescription}
+                id={id}
+                name={name}
+                age={age}
+                description={description}
+                technologies={technologies}
+                url={url}
               />
             ))}
         </div>

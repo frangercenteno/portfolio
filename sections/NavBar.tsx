@@ -1,10 +1,8 @@
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
-import data from "../db/routes_navigation.json";
 
-const { routes } = data;
+import { routes } from "../constants";
 
 const ListMenu = styled.ul<{ toggleList: boolean }>`
   display: ${({ toggleList }) => (toggleList ? "block" : "none")};
@@ -23,18 +21,6 @@ const NavBar = () => {
       <div className="container py-2">
         <div className="max-w-3xl w-full m-auto md:flex md:justify-between md:items-center">
           <div className="flex justify-between items-center ">
-            <Link href="/">
-              <a className="w-1/4 md:w-1/2 cursor-pointer">
-                <Image
-                  src="/preferente-logo-bl-wh_1.svg"
-                  width={280}
-                  height={180}
-                  layout="intrinsic"
-                  alt="Franger Dev"
-                />
-              </a>
-            </Link>
-
             <button
               className="w-6 md:hidden"
               type="button"

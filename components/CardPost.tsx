@@ -2,30 +2,11 @@ import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-interface CardArticleProps {
-  categories: {
-    id: number;
-    name: string;
-    image: string;
-  }[];
-  id: number;
-  title: string;
-  summary: string;
-  date: string;
-  id_category: number;
-  path: string;
-}
+import { Post } from "../types";
 
-const CardArticle: FC<CardArticleProps> = ({
-  categories,
-  title,
-  summary,
-  date,
-  id_category,
-  path,
-}) => {
-  const category = categories.find((category) => category.id === id_category);
+interface CardPostProps extends Post {}
 
+const CardPost: FC<CardPostProps> = ({ title, summary, date, path }) => {
   return (
     <Link href={path} passHref>
       <a
@@ -47,14 +28,14 @@ const CardArticle: FC<CardArticleProps> = ({
           <footer className="flex items-center justify-between leading-none p-2 md:p-4">
             <div className="flex items-center ">
               <Image
-                alt={category?.name}
+                alt="/graphql.svg"
                 className="block rounded-full w-10 h-10"
-                src={category?.image || ""}
+                src="/graphql.svg"
                 layout="intrinsic"
                 width={30}
                 height={30}
               />
-              <p className="ml-2 text-sm">{category?.name}</p>
+              <p className="ml-2 text-sm">Technology</p>
             </div>
           </footer>
         </article>
@@ -63,4 +44,4 @@ const CardArticle: FC<CardArticleProps> = ({
   );
 };
 
-export default CardArticle;
+export default CardPost;

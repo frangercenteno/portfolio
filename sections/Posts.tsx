@@ -1,26 +1,21 @@
 import { FC } from "react";
 import Link from "next/link";
 
-import CardArticle from "@/components/CardArticle";
+import CardPost from "@/components/CardPost";
 import TitleSection from "@/components/TitleSection";
 
-import data from "db/articles.json";
-const { articles, categories } = data.data;
+import { posts } from "../constants";
 
-interface ReadMeProps {}
+interface PostsProps {}
 
-const ReadMe: FC<ReadMeProps> = () => {
-  if (articles.length === 0) {
-    return null;
-  }
-
+const Posts: FC<PostsProps> = () => {
   return (
     <div className="pt-16 bg-secondary-default">
       <div className="container mx-auto">
         <TitleSection isDark title="Léeme" />
         <div className="flex flex-wrap max-w-3xl m-auto">
-          {articles.slice(0, 3).map((item) => (
-            <CardArticle key={item.id} {...item} categories={categories} />
+          {posts.slice(0, 3).map((item) => (
+            <CardPost key={item.id} {...item} />
           ))}
         </div>
         <div className="mt-6 max-w-3xl m-auto">
@@ -39,4 +34,4 @@ const ReadMe: FC<ReadMeProps> = () => {
   );
 };
 
-export default ReadMe;
+export default Posts;

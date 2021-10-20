@@ -1,38 +1,31 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { Project } from "../types";
 
-const ItemsExperienceWrapper = styled.div`
+const ItemsProjectWrapper = styled.div`
   @media (min-width: 758px) {
     width: 49%;
   }
 `;
 
-interface ItemsExperienceProps {
-  company: string;
-  titleJob: string;
-  summary: string;
-}
+interface ItemsProjectProps extends Project {}
 
-const ItemsExperience: FC<ItemsExperienceProps> = ({
-  company,
-  titleJob,
-  summary,
-}) => {
+const ItemsProject: FC<ItemsProjectProps> = ({ name, age, description }) => {
   return (
-    <ItemsExperienceWrapper className="my-2 sm:my-1 w-full lg:my-4 border border-solid border-primary-default">
+    <ItemsProjectWrapper className="my-2 sm:my-1 w-full lg:my-4 border border-solid border-primary-default">
       <div className="flex-auto">
         <h3 className="text-base text-secondary-lighter font-bold p-2 md:p-4">
-          {company}
+          {name}
         </h3>
         <h4 className="text-sm text-secondary-lighter font-normal px-2 md:px-4">
-          {titleJob}
+          {age}
         </h4>
         <p className="text-xs text-secondary-lighter font-thin leading-1 p-2 md:p-4">
-          {summary}
+          {description}
         </p>
       </div>
-    </ItemsExperienceWrapper>
+    </ItemsProjectWrapper>
   );
 };
 
-export default ItemsExperience;
+export default ItemsProject;
