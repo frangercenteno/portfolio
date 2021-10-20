@@ -2,16 +2,28 @@ import { Project, Route, Technology, Post } from "./types";
 
 export const routes: Route[] = [
   {
-    name: "Projects",
-    slug: "projects",
-    url: "/#projects",
+    name: "Home",
+    slug: "/",
+    url: "/",
     id: 1,
   },
   {
-    name: "Post",
-    slug: "post",
-    url: "/#post",
+    name: "About me",
+    slug: "about-me",
+    url: "/about-me",
     id: 2,
+  },
+  {
+    name: "Projects",
+    slug: "projects",
+    url: "/projects",
+    id: 3,
+  },
+  {
+    name: "Posts",
+    slug: "posts",
+    url: "/posts",
+    id: 4,
   },
 ];
 
