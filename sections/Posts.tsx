@@ -10,9 +10,9 @@ interface PostsProps {}
 
 const Posts: FC<PostsProps> = () => {
   return (
-    <div className="pt-16 bg-secondary-default">
+    <div className="pb-16 bg-secondary-default">
       <div className="container mx-auto">
-        <TitleSection isDark title="Léeme" />
+        <TitleSection isDark title="Post" />
         <div className="flex flex-wrap max-w-3xl m-auto">
           {posts.slice(0, 3).map((item) => (
             <CardPost key={item.id} {...item} />

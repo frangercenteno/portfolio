@@ -17,8 +17,8 @@ const NavBar = () => {
   const [toggleList, setToggleList] = useState<boolean>(false);
 
   return (
-    <nav className="bg-secondary-default">
-      <div className="container py-2">
+    <nav className="bg-secondary-default h-12 sm:h-20 flex items-center relative">
+      <div className="container">
         <div className="max-w-3xl w-full m-auto md:flex md:justify-between md:items-center">
           <div className="flex justify-between items-center ">
             <button
@@ -33,15 +33,15 @@ const NavBar = () => {
           </div>
           <ListMenu
             toggleList={toggleList}
-            className="md:justify-between md:items-center py-2"
+            className="md:justify-end md:items-center py-2 absolute left-0 right-0 sm:relative container bg-secondary-default"
           >
             {routes.map(({ name, slug, id }) => (
-              <li className="my-2 md:mx-4" key={id}>
+              <li
+                className="py-2 md:px-4 text-primary-default rounded hover:text-secondary-lighter hover:bg-primary-dark cursor-pointer"
+                key={id}
+              >
                 <Link href={slug}>
-                  <a
-                    href={slug}
-                    className="text-primary-default font-bold hover:text-secondary-dark"
-                  >
+                  <a href={slug} className="font-bold">
                     {name}
                   </a>
                 </Link>

@@ -12,7 +12,7 @@ interface ItemsProjectProps extends Project {}
 
 const ItemsProject: FC<ItemsProjectProps> = ({ name, age, description }) => {
   return (
-    <ItemsProjectWrapper className="my-2 sm:my-1 w-full lg:my-4 border border-solid border-primary-default">
+    <ItemsProjectWrapper className="my-2 sm:my-1 w-full lg:my-4  rounded border-2 border-solid border-primary-default">
       <div className="flex-auto">
         <h3 className="text-base text-secondary-lighter font-bold p-2 md:p-4">
           {name}

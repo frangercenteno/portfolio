@@ -11,7 +11,7 @@ const CardPost: FC<CardPostProps> = ({ title, summary, date, path }) => {
     <Link href={path} passHref>
       <a
         href={path}
-        className="block my-2 sm:my-1 px-1 w-full lg:my-4 lg:px-4 cursor-pointer hover:opacity-75 duration-100 text-secondary-lighter border-2 border-solid border-primary-default"
+        className="block my-2 sm:my-1 px-1 w-full lg:my-4 lg:px-4 cursor-pointer hover:opacity-75 duration-100 text-secondary-lighter border-2 border-solid rounded border-primary-default"
       >
         <article className="overflow-hidden">
           <header className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -30,7 +30,7 @@ const CardPost: FC<CardPostProps> = ({ title, summary, date, path }) => {
               <Image
                 alt="/graphql.svg"
                 className="block rounded-full w-10 h-10"
-                src="/graphql.svg"
+                src="/img/graphql.svg"
                 layout="intrinsic"
                 width={30}
                 height={30}

@@ -6,17 +6,17 @@ import ItemsProject from "@/components/ItemsProject";
 
 import { projects } from "../constants";
 
-interface ExperienceProps {}
+interface ProjectsProps {}
 
-const Experience: FC<ExperienceProps> = () => {
+const Projects: FC<ProjectsProps> = () => {
   return (
-    <div className="bg-secondary-default py-16" id="experience">
+    <div className="bg-secondary-default pb-16">
       <div className="container">
         <TitleSection title="Projects" isDark />
 
         <div className="mx-auto shadow-md max-w-3xl flex flex-wrap justify-between">
           {projects
-            .slice(0, 2)
+            .slice(0, 4)
             .map(({ id, name, age, description, technologies, url }) => (
               <ItemsProject
                 key={id}
@@ -45,4 +45,4 @@ const Experience: FC<ExperienceProps> = () => {
   );
 };
 
-export default Experience;
+export default Projects;
