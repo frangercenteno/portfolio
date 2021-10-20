@@ -37,14 +37,14 @@ const NavBar = () => {
         </div>
         <ListMenu
           toggleList={toggleList}
-          className="md:justify-end md:items-center py-2 absolute left-0 right-0 sm:relative container bg-secondary-default"
+          className="md:justify-end md:items-center py-2 absolute left-0 right-0 sm:relative bg-secondary-default"
         >
           {routes.map(({ name, slug, id }) => (
             <li
               className={clsx(
-                "py-2 ml-1 md:px-4 text-primary-default rounded hover:text-secondary-lighter hover:bg-primary-dark cursor-pointer",
+                "py-2 md:ml-1 md:px-4 text-primary-default rounded hover:text-secondary-lighter hover:bg-primary-dark cursor-pointer",
                 pathname.replace("/", "") === slug &&
-                  "text-secondary-lighter bg-primary-dark"
+                  "md:text-secondary-lighter md:bg-primary-dark"
               )}
               key={id}
             >
