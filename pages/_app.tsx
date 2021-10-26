@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css";
+import "../styles/font.css";
 import { GlobalStyles } from "styles/theme.config";
 
 // import App from "next/app";
