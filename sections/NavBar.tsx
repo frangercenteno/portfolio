@@ -42,14 +42,17 @@ const NavBar = () => {
           {routes.map(({ name, slug, id }) => (
             <li
               className={clsx(
-                "py-2 md:ml-1 md:px-4 text-primary-default rounded hover:text-secondary-lighter hover:bg-primary-dark cursor-pointer",
+                "md:ml-1 text-primary-default rounded hover:text-secondary-lighter hover:bg-primary-dark cursor-pointer",
                 pathname.replace("/", "") === slug &&
                   "md:text-secondary-lighter md:bg-primary-dark"
               )}
               key={id}
             >
               <Link href={slug}>
-                <a href={slug} className="font-bold h-full w-full block">
+                <a
+                  href={slug}
+                  className="font-bold h-full w-full block py-2 md:px-4"
+                >
                   {name}
                 </a>
               </Link>

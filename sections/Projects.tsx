@@ -1,8 +1,8 @@
 import { FC } from "react";
-import Link from "next/link";
 
 import TitleSection from "@/components/TitleSection";
 import ItemsProject from "@/components/ItemsProject";
+import LinkViewMore from "@/components/LinkViewMore";
 
 import { projects } from "../constants";
 
@@ -28,17 +28,7 @@ const Projects: FC<ProjectsProps> = () => {
             />
           ))}
       </div>
-      <div className="mt-6 max-w-3xl m-auto">
-        <Link href="/blog">
-          <a
-            href="/blog"
-            className="text-secondary-lighter text-base hover:text-secondary-lighter"
-          >
-            Ver más {">"}
-            {">"}
-          </a>
-        </Link>
-      </div>
+      <LinkViewMore url="/projects" />
     </section>
   );
 };

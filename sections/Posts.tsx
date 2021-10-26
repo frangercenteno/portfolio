@@ -1,8 +1,8 @@
 import { FC } from "react";
-import Link from "next/link";
 
 import CardPost from "@/components/CardPost";
 import TitleSection from "@/components/TitleSection";
+import LinkViewMore from "@/components/LinkViewMore";
 
 import { posts } from "../constants";
 
@@ -17,17 +17,7 @@ const Posts: FC<PostsProps> = () => {
           <CardPost key={item.id} {...item} />
         ))}
       </div>
-      <div className="mt-6 max-w-3xl m-auto">
-        <Link href="/blog">
-          <a
-            href="/blog"
-            className="text-secondary-lighter text-base hover:text-secondary-lighter"
-          >
-            Ver más {">"}
-            {">"}
-          </a>
-        </Link>
-      </div>
+      <LinkViewMore url="/posts" />
     </section>
   );
 };
