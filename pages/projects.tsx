@@ -1,8 +1,15 @@
+import { FC } from "react";
 import Layout from "@/components/Layout";
 import ItemsProject from "@/components/ItemsProject";
-import { projects } from "../constants";
+import { CustomServerSideProps } from "@/interfaces/CustomServerSideProps";
+import { GitHubData } from "@/interfaces/GitHub";
+import { BASE_API } from "../constants";
 
-const Projects = () => {
+interface ProjectsProps {
+  data: GitHubData[];
+}
+
+const Projects: FC<ProjectsProps> = ({ data }) => {
   return (
     <Layout>
       <div className="py-20">
@@ -14,20 +21,30 @@ const Projects = () => {
         </h2>
       </div>
       <div className="shadow-md flex flex-wrap justify-between">
-        {projects.map(({ id, name, age, description, technologies, url }) => (
-          <ItemsProject
-            key={id}
-            id={id}
-            name={name}
-            age={age}
-            description={description}
-            technologies={technologies}
-            url={url}
-          />
+        {data.map((item) => (
+          <ItemsProject key={item.id} data={item} />
         ))}
       </div>
     </Layout>
   );
 };
+
+export const getServerSideProps: CustomServerSideProps<ProjectsProps> =
+  async () => {
+    const res = await fetch(`${BASE_API}repos`);
+    const data: GitHubData[] = await res.json();
+
+    if (!data) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        data: data.filter((item) => item.name !== "frangercenteno"),
+      },
+    };
+  };
 
 export default Projects;
