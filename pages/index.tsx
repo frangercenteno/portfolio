@@ -26,7 +26,7 @@ const Home: FC<HomeProps> = ({ data }) => {
 export const getServerSideProps: CustomServerSideProps<HomeProps> =
   async () => {
     const res = await fetch(`${BASE_API}repos`);
-    const data = await res.json();
+    const data: GitHubData[] = await res.json();
 
     if (!data) {
       return {
@@ -36,7 +36,7 @@ export const getServerSideProps: CustomServerSideProps<HomeProps> =
 
     return {
       props: {
-        data: data.slice(0, 4),
+        data: data.filter((item) => item.name !== "frangercenteno").slice(0, 4),
       },
     };
   };

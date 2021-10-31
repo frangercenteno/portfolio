@@ -17,6 +17,7 @@ interface ItemsProjectProps {
 const ItemsProject: FC<ItemsProjectProps> = ({
   data: { name, pushed_at, description, topics, language, html_url },
 }) => {
+  const fullYear = new Date(pushed_at).getFullYear();
   return (
     <ItemsProjectWrapper className="my-2 sm:my-1 w-full lg:my-4 p-2 md:p-4 rounded border-2 border-solid border-primary-default">
       <div className="flex-auto">
@@ -25,7 +26,7 @@ const ItemsProject: FC<ItemsProjectProps> = ({
           {language ? <span className="font-thin">[{language}]</span> : null}
         </h3>
         <h4 className="text-sm text-secondary-lighter font-normal mb-2">
-          {pushed_at}
+          {fullYear}
         </h4>
         <p className="text-xs text-secondary-lighter font-thin leading-1 mb-4">
           {description}
