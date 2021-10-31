@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Post } from "../types";
+import { Post } from "@/interfaces/Pages";
 
 interface CardPostProps extends Post {}
 
