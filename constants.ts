@@ -1,4 +1,6 @@
-import { Project, Route, Technology, Post } from "./types";
+import { Route, Technology, Post } from "./interfaces/Pages";
+
+export const BASE_API = "https://api.github.com/users/frangercenteno/";
 
 export const routes: Route[] = [
   {
@@ -24,41 +26,6 @@ export const routes: Route[] = [
     slug: "posts",
     url: "/posts",
     id: 4,
-  },
-];
-
-export const projects: Project[] = [
-  {
-    id: 0,
-    name: "Crehana",
-    age: "2021",
-    description: "Lorem ipsum",
-    technologies: ["node", "javascript", "typescript"],
-    url: "/",
-  },
-  {
-    id: 1,
-    name: "Crehana",
-    age: "2021",
-    description: "Lorem ipsum",
-    technologies: ["node", "javascript", "typescript"],
-    url: "/",
-  },
-  {
-    id: 2,
-    name: "Crehana",
-    age: "2021",
-    description: "Lorem ipsum",
-    technologies: ["node", "javascript", "typescript"],
-    url: "/",
-  },
-  {
-    id: 3,
-    name: "Crehana",
-    age: "2021",
-    description: "Lorem ipsum",
-    technologies: ["node", "javascript", "typescript"],
-    url: "/",
   },
 ];
 

@@ -1,3 +1,5 @@
+import { GitHubData } from "./GitHub";
+
 export interface Route {
   id: number;
   name: string;
@@ -6,12 +8,7 @@ export interface Route {
 }
 
 export interface Project {
-  id: number;
-  name: string;
-  age: string;
-  description: string;
-  technologies: string[];
-  url: string;
+  data: GitHubData;
 }
 
 export interface Technology {

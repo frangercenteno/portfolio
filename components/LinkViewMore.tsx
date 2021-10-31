@@ -4,14 +4,15 @@ import Image from "next/image";
 
 interface LinkViewMoreProps {
   url: string;
+  name?: string;
 }
 
-const LinkViewMore: FC<LinkViewMoreProps> = ({ url }) => {
+const LinkViewMore: FC<LinkViewMoreProps> = ({ url, name }) => {
   return (
-    <div className="mt-6 max-w-3xl m-auto">
+    <div className="mt-6">
       <Link href={url}>
         <a className="text-secondary-lighter text-base hover:text-secondary-lighter flex items-center">
-          <span className="block mr-2">Ver más</span>
+          <span className="block mr-2">{name ? name : "Ver más"}</span>
 
           <Image
             src="/img/icons/arrow.svg"
