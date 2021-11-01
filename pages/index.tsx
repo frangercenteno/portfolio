@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { CustomServerSideProps } from "@/interfaces/CustomServerSideProps";
 
 import Layout from "@/components/Layout";
 import Hero from "@/sections/Hero";
@@ -8,27 +7,39 @@ import Posts from "@/sections/Posts";
 
 import { BASE_API } from "../constants";
 import { GitHubData } from "@/interfaces/GitHub";
+import Post from "@/interfaces/Post";
+import { getAllPosts } from "@/utils/mdxUtils";
 
 interface HomeProps {
   data: GitHubData[];
+  posts: Post[];
 }
 
-const Home: FC<HomeProps> = ({ data }) => {
+const Home: FC<HomeProps> = ({ data, posts }) => {
   return (
     <Layout>
       <Hero />
       <Projects data={data} />
-      <Posts />
+      <Posts posts={posts} />
     </Layout>
   );
 };
 
-export const getServerSideProps: CustomServerSideProps<HomeProps> =
-  async () => {
+export const getServerSideProps = async () => {
+  try {
     const res = await fetch(`${BASE_API}repos`);
     const data: GitHubData[] = await res.json();
 
-    if (!data) {
+    const posts = getAllPosts([
+      "slug",
+      "date",
+      "thumbnail",
+      "title",
+      "description",
+      "tags",
+    ]);
+
+    if (!data || !posts) {
       return {
         notFound: true,
       };
@@ -37,8 +48,14 @@ export const getServerSideProps: CustomServerSideProps<HomeProps> =
     return {
       props: {
         data: data.filter((item) => item.name !== "frangercenteno").slice(0, 4),
+        posts: posts.slice(0, 3),
       },
     };
-  };
+  } catch (_) {
+    return {
+      notFound: true,
+    };
+  }
+};
 
 export default Home;

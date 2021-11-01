@@ -11,7 +11,7 @@ const LinkViewMore: FC<LinkViewMoreProps> = ({ url, name }) => {
   return (
     <div className="mt-6">
       <Link href={url}>
-        <a className="text-secondary-lighter text-base hover:text-secondary-lighter flex items-center">
+        <a className="text-secondary-lighter text-base hover:text-secondary-dark flex items-center">
           <span className="block mr-2">{name ? name : "Ver más"}</span>
 
           <Image

@@ -1,16 +1,21 @@
 import { FC } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
-import { Post } from "@/interfaces/Pages";
+import IPost from "@/interfaces/Post";
 
-interface CardPostProps extends Post {}
+interface CardPostProps extends IPost {}
 
-const CardPost: FC<CardPostProps> = ({ title, summary, date, path }) => {
+const CardPost: FC<CardPostProps> = ({
+  title,
+  description,
+  date,
+  tags,
+  slug,
+}) => {
   return (
-    <Link href={path} passHref>
+    <Link href={`posts/${slug}`} passHref>
       <a
-        href={path}
+        href={slug}
         className="block my-2 sm:my-1 px-1 w-full lg:my-4 lg:px-4 cursor-pointer hover:opacity-75 duration-100 text-secondary-lighter border-2 border-solid rounded border-primary-default"
       >
         <article className="overflow-hidden">
@@ -22,21 +27,18 @@ const CardPost: FC<CardPostProps> = ({ title, summary, date, path }) => {
           </header>
 
           <main className="px-2 md:px-4">
-            <p className="font-normal  text-sm">{summary}</p>
+            <p className="font-normal  text-sm">{description}</p>
           </main>
 
-          <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-            <div className="flex items-center ">
-              <Image
-                alt="/graphql.svg"
-                className="block rounded-full w-10 h-10"
-                src="/img/graphql.svg"
-                layout="intrinsic"
-                width={30}
-                height={30}
-              />
-              <p className="ml-2 text-sm">Technology</p>
-            </div>
+          <footer className="flex items-center leading-none p-2 md:p-4">
+            {tags.map((tag, i) => (
+              <div
+                className="p-1 text-primary-dark bg-secondary-dark mr-2 mb-1"
+                key={i.toString()}
+              >
+                {tag}
+              </div>
+            ))}
           </footer>
         </article>
       </a>
