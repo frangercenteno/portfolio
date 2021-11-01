@@ -2,10 +2,10 @@ import { FC } from "react";
 
 import Layout from "@/components/Layout";
 import Hero from "@/sections/Hero";
-import Projects from "@/sections/Projects";
+//import Projects from "@/sections/Projects";
 import Posts from "@/sections/Posts";
 
-import { BASE_API } from "../constants";
+//import { BASE_API } from "../constants";
 import { GitHubData } from "@/interfaces/GitHub";
 import Post from "@/interfaces/Post";
 import { getAllPosts } from "@/utils/mdxUtils";
@@ -15,11 +15,11 @@ interface HomeProps {
   posts: Post[];
 }
 
-const Home: FC<HomeProps> = ({ data, posts }) => {
+const Home: FC<HomeProps> = ({ posts }) => {
   return (
     <Layout>
       <Hero />
-      <Projects data={data} />
+      {/* <Projects data={data} /> */}
       <Posts posts={posts} />
     </Layout>
   );
@@ -27,8 +27,8 @@ const Home: FC<HomeProps> = ({ data, posts }) => {
 
 export const getServerSideProps = async () => {
   try {
-    const res = await fetch(`${BASE_API}repos`);
-    const data: GitHubData[] = await res.json();
+    //const res = await fetch(`${BASE_API}repos`);
+    //const data: GitHubData[] = await res.json();
 
     const posts = await getAllPosts([
       "slug",
@@ -39,15 +39,15 @@ export const getServerSideProps = async () => {
       "tags",
     ]);
 
-    if (!data) {
-      return {
-        notFound: true,
-      };
-    }
+    // if (!data) {
+    //   return {
+    //     notFound: true,
+    //   };
+    // }
 
     return {
       props: {
-        data: data.filter((item) => item.name !== "frangercenteno").slice(0, 4),
+        // data: data.filter((item) => item.name !== "frangercenteno").slice(0, 4),
         posts: posts.slice(0, 3),
       },
     };
