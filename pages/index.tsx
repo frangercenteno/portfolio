@@ -39,7 +39,7 @@ export const getServerSideProps = async () => {
       "tags",
     ]);
 
-    if (!data || !posts) {
+    if (!data) {
       return {
         notFound: true,
       };
