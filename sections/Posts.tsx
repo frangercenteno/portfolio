@@ -15,7 +15,7 @@ const Posts: FC<PostsProps> = ({ posts }) => {
     <section className="pb-16">
       <TitleSection isDark title="Post" />
       <div className="flex flex-wrap">
-        {posts.slice(0, 3).map((item, i) => (
+        {posts?.slice(0, 3).map((item, i) => (
           <CardPost key={i.toString()} {...item} />
         ))}
       </div>

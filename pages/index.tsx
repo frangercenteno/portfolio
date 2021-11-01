@@ -38,9 +38,6 @@ export const getServerSideProps = async () => {
     const res = await fetch(`${BASE_API}repos`);
     const data: GitHubData[] = await res.json();
 
-    console.log(posts, "posrs");
-    console.log(data, "data");
-
     if (!data) {
       return {
         notFound: true,

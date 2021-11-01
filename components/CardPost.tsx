@@ -13,7 +13,7 @@ const CardPost: FC<CardPostProps> = ({
   slug,
 }) => {
   return (
-    <Link href={`posts/${slug}`} passHref>
+    <Link href={`/posts/${slug}`} passHref>
       <a
         href={slug}
         className="block my-2 sm:my-1 px-1 w-full lg:my-4 lg:px-4 cursor-pointer hover:opacity-75 duration-100 text-secondary-lighter border-2 border-solid rounded border-primary-default"
