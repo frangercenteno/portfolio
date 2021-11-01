@@ -4,17 +4,19 @@ import CardPost from "@/components/CardPost";
 import TitleSection from "@/components/TitleSection";
 import LinkViewMore from "@/components/LinkViewMore";
 
-import { posts } from "../constants";
+import Post from "@/interfaces/Post";
 
-interface PostsProps {}
+interface PostsProps {
+  posts: Post[];
+}
 
-const Posts: FC<PostsProps> = () => {
+const Posts: FC<PostsProps> = ({ posts }) => {
   return (
     <section className="pb-16">
       <TitleSection isDark title="Post" />
       <div className="flex flex-wrap">
-        {posts.slice(0, 3).map((item) => (
-          <CardPost key={item.id} {...item} />
+        {posts.slice(0, 3).map((item, i) => (
+          <CardPost key={i.toString()} {...item} />
         ))}
       </div>
       <LinkViewMore url="/posts" />
