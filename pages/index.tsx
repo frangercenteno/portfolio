@@ -25,7 +25,7 @@ const Home: FC<HomeProps> = ({ data, posts }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   try {
     const posts = await getAllPosts([
       "slug",

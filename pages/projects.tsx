@@ -1,7 +1,6 @@
 import { FC } from "react";
 import Layout from "@/components/Layout";
 import ItemsProject from "@/components/ItemsProject";
-import { CustomServerSideProps } from "@/interfaces/CustomServerSideProps";
 import { GitHubData } from "@/interfaces/GitHub";
 import { BASE_API } from "../constants";
 
@@ -29,22 +28,21 @@ const Projects: FC<ProjectsProps> = ({ data }) => {
   );
 };
 
-export const getServerSideProps: CustomServerSideProps<ProjectsProps> =
-  async () => {
-    const res = await fetch(`${BASE_API}repos`);
-    const data: GitHubData[] = await res.json();
+export const getStaticProps = async () => {
+  const res = await fetch(`${BASE_API}repos`);
+  const data: GitHubData[] = await res.json();
 
-    if (!data) {
-      return {
-        notFound: true,
-      };
-    }
-
+  if (!data) {
     return {
-      props: {
-        data: data.filter((item) => item.name !== "frangercenteno"),
-      },
+      notFound: true,
     };
+  }
+
+  return {
+    props: {
+      data: data.filter((item) => item.name !== "frangercenteno"),
+    },
   };
+};
 
 export default Projects;
