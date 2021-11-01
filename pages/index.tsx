@@ -26,36 +26,30 @@ const Home: FC<HomeProps> = ({ data, posts }) => {
 };
 
 export const getServerSideProps = async () => {
-  try {
-    const res = await fetch(`${BASE_API}repos`);
-    const data: GitHubData[] = await res.json();
+  const res = await fetch(`${BASE_API}repos`);
+  const data: GitHubData[] = await res.json();
 
-    const posts = getAllPosts([
-      "slug",
-      "date",
-      "thumbnail",
-      "title",
-      "description",
-      "tags",
-    ]);
+  const posts = getAllPosts([
+    "slug",
+    "date",
+    "thumbnail",
+    "title",
+    "description",
+    "tags",
+  ]);
 
-    if (!data) {
-      return {
-        notFound: true,
-      };
-    }
-
-    return {
-      props: {
-        data: data.filter((item) => item.name !== "frangercenteno").slice(0, 4),
-        posts: posts.slice(0, 3),
-      },
-    };
-  } catch (_) {
+  if (!data) {
     return {
       notFound: true,
     };
   }
+
+  return {
+    props: {
+      data: data.filter((item) => item.name !== "frangercenteno").slice(0, 4),
+      posts: posts.slice(0, 3),
+    },
+  };
 };
 
 export default Home;
