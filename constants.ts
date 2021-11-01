@@ -1,6 +1,9 @@
 import { Route, Technology, Post } from "./interfaces/Pages";
 
 export const BASE_API = "https://api.github.com/users/frangercenteno/";
+export const SITE_URL = "https://franger.dev";
+export const SITE_NAME = "Franger Dev";
+export const TWITTER_USERNAME = "@frangerce";
 
 export const routes: Route[] = [
   {
@@ -11,19 +14,19 @@ export const routes: Route[] = [
   },
   {
     name: "About me",
-    slug: "about-me",
+    slug: "/about-me",
     url: "/about-me",
     id: 2,
   },
   {
     name: "Projects",
-    slug: "projects",
+    slug: "/projects",
     url: "/projects",
     id: 3,
   },
   {
     name: "Posts",
-    slug: "posts",
+    slug: "/posts",
     url: "/posts",
     id: 4,
   },
