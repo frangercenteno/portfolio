@@ -1,13 +1,14 @@
+import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {
+interface ThumbnailProps {
   title: string;
   src: string;
   slug?: string;
-};
+}
 
-const Thumbnail: React.FC<Props> = ({ title, src, slug }: Props) => {
+const Thumbnail: FC<ThumbnailProps> = ({ title, src, slug }) => {
   const image = (
     <Image
       src={src}

@@ -1,19 +1,19 @@
-// components/Meta.tsx
+import { FC } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
 import { SITE_URL, SITE_NAME, TWITTER_USERNAME } from "../constants";
 
-type Props = {
+interface MetaProps {
   pageTitle?: string;
-};
+}
 
 const meta = {
   description: `${SITE_NAME} | Web Developer Portfolio.`,
   ogImagePath: "/preferente-logo-bl-wh_1.svg",
 };
 
-const Meta: React.FC<Props> = ({ pageTitle }: Props) => {
+const Meta: FC<MetaProps> = ({ pageTitle }) => {
   const router = useRouter();
   const ogUrl = SITE_URL + router.asPath;
   const ogType = router.pathname === "/" ? "website" : "article";

@@ -2,9 +2,9 @@ import { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { useRouter } from "next/router";
+import clsx from "clsx";
 
 import { routes } from "../constants";
-import clsx from "clsx";
 
 const ListMenu = styled.ul<{ toggleList: boolean }>`
   display: ${({ toggleList }) => (toggleList ? "block" : "none")};
@@ -42,8 +42,9 @@ const NavBar = () => {
           {routes.map(({ name, slug, id }) => (
             <li
               className={clsx(
-                "md:ml-1 text-primary-default rounded hover:text-secondary-lighter hover:bg-primary-dark cursor-pointer",
-                pathname.replace("/", "") === slug &&
+                "md:ml-1 text-primary-default rounded hover:text-secondary-lighter hover:bg-primary-dark cursor-pointer pl-1",
+                pathname !== "/" &&
+                  pathname === slug &&
                   "md:text-secondary-lighter md:bg-primary-dark"
               )}
               key={id}
