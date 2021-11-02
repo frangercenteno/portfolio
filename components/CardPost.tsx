@@ -16,7 +16,7 @@ const CardPost: FC<CardPostProps> = ({
     <Link href={`/posts/${slug}`} passHref>
       <a
         href={slug}
-        className="block my-2 sm:my-1 px-1 w-full lg:my-6 lg:px-4 cursor-pointer hover:opacity-75 duration-100 text-secondary-lighter border-2 border-solid rounded border-primary-default"
+        className="block my-4 sm:my-1 px-1 w-full lg:my-6 lg:px-4 cursor-pointer hover:opacity-75 duration-100 text-secondary-lighter border-2 border-solid rounded border-primary-default"
       >
         <article className="overflow-hidden">
           <header className="flex items-center justify-between leading-tight p-2 md:p-4">
