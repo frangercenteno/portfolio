@@ -5,7 +5,7 @@ import { SKILLS } from "../constants";
 
 const AboutMe = () => {
   return (
-    <Layout>
+    <Layout pageTitle="About Me">
       <div className="py-16">
         <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
           About me
@@ -35,6 +35,7 @@ const AboutMe = () => {
                     height={64}
                     loader={({ src }) => `${src}?auto=format&q=80`}
                     blurDataURL={`${item.imageUrl}?base64`}
+                    unoptimized
                   />
                 </div>
               ))}

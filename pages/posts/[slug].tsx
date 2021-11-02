@@ -40,10 +40,6 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
       </Head>
 
       <article className="prose prose-green pt-16">
-        <div className="mb-16">
-          <Thumbnail title={frontMatter.title} src={frontMatter.thumbnailUrl} />
-        </div>
-
         <h1 className="font-bold text-4xl md:text-6xl my-3">
           {frontMatter.title}
         </h1>
@@ -51,6 +47,9 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
         <p className="font-bold text-1xl md:text-2xl mb-16">
           {frontMatter.description}
         </p>
+        <div className="mb-16">
+          <Thumbnail title={frontMatter.title} src={frontMatter.thumbnailUrl} />
+        </div>
 
         <MDXRemote {...source} components={components} />
       </article>

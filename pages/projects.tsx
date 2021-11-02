@@ -10,7 +10,7 @@ interface ProjectsProps {
 
 const Projects: FC<ProjectsProps> = ({ data }) => {
   return (
-    <Layout>
+    <Layout pageTitle="Projects">
       <div className="py-16">
         <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
           Projects

@@ -27,6 +27,7 @@ const Footer = () => {
                 objectPosition="center"
                 loader={({ src }) => `${src}?auto=format&q=80`}
                 blurDataURL={"/img/social_media/linkedin.svg?base64"}
+                unoptimized
               />
             </a>
           </div>
@@ -46,6 +47,7 @@ const Footer = () => {
                 objectPosition="center"
                 loader={({ src }) => `${src}?auto=format&q=80`}
                 blurDataURL={"/img/social_media/instagram.svg?base64"}
+                unoptimized
               />
             </a>
           </div>
@@ -65,6 +67,7 @@ const Footer = () => {
                 objectPosition="center"
                 loader={({ src }) => `${src}?auto=format&q=80`}
                 blurDataURL={"/img/social_media/twitter.svg?base64"}
+                unoptimized
               />
             </a>
           </div>
@@ -84,6 +87,7 @@ const Footer = () => {
                 objectPosition="center"
                 loader={({ src }) => `${src}?auto=format&q=80`}
                 blurDataURL={"/img/social_media/github.svg?base64"}
+                unoptimized
               />
             </a>
           </div>

@@ -16,6 +16,7 @@ const Thumbnail: React.FC<Props> = ({ title, src, slug }: Props) => {
       height={720}
       loader={({ src }) => `${src}?auto=format&q=80`}
       blurDataURL={`${src}?base64`}
+      unoptimized
     />
   );
   return (

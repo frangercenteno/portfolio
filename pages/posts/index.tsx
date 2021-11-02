@@ -12,7 +12,7 @@ interface PostsProps {
 
 const Posts: FC<PostsProps> = ({ posts }) => {
   return (
-    <Layout>
+    <Layout pageTitle="Posts">
       <div className="py-20">
         <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
           Posts
