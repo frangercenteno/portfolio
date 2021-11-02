@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 const AboutMe = () => {
   return (
     <Layout>
-      <div className="py-20">
+      <div className="py-16">
         <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
           About me
         </h1>

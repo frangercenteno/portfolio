@@ -17,13 +17,13 @@ const Posts: FC<PostsProps> = ({ posts }) => {
         <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
           Posts
         </h1>
-        <h2 className="text-secondary-lighter text-1xl font-bold leading-none md:mt-2">
+        <h2 className="text-secondary-lighter text-1xl font-bold leading-none mt-2">
           Coming soon...
         </h2>
-        {posts.map((item, i) => (
-          <CardPost key={i.toString()} {...item} />
-        ))}
       </div>
+      {posts.map((item, i) => (
+        <CardPost key={i.toString()} {...item} />
+      ))}
     </Layout>
   );
 };

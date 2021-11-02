@@ -9,9 +9,9 @@ interface HeroProps {}
 const Hero: FC<HeroProps> = () => {
   return (
     <header className="header-main">
-      <div className="py-20  md:flex">
+      <div className="py-16  md:flex">
         <div className="sm:w-2/3">
-          <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
+          <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none mb-2">
             Franger Centeno
           </h1>
           <h2 className="text-secondary-lighter text-1xl font-bold leading-none md:mt-2">

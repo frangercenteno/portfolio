@@ -39,14 +39,18 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
         <meta property="og:image" content={ogImage} key="ogImage" />
       </Head>
 
-      <article className="prose prose-green">
-        <div className="mb-4">
+      <article className="prose prose-green pt-16">
+        <div className="mb-16">
           <Thumbnail title={frontMatter.title} src={frontMatter.thumbnailUrl} />
         </div>
 
-        <h1 className="font-bold text-6xl my-3">{frontMatter.title}</h1>
+        <h1 className="font-bold text-4xl md:text-6xl my-3">
+          {frontMatter.title}
+        </h1>
 
-        <p className="font-bold text-2xl my-4">{frontMatter.description}</p>
+        <p className="font-bold text-1xl md:text-2xl mb-16">
+          {frontMatter.description}
+        </p>
 
         <MDXRemote {...source} components={components} />
       </article>
