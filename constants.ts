@@ -1,9 +1,9 @@
-import { Route, Technology, Post } from "./interfaces/Pages";
+import { Route, Technology } from "./interfaces/Pages";
 
 export const BASE_API = "https://api.github.com/users/frangercenteno/";
 export const SITE_URL = "https://franger.dev";
 export const SITE_NAME = "Franger Dev";
-export const TWITTER_USERNAME = "@frangerce";
+export const TWITTER_USERNAME = "@frangercenteno";
 
 export const routes: Route[] = [
   {
@@ -68,45 +68,6 @@ export const technologies: Technology[] = [
     slug: "nextjs",
     path: "/img/next-js.svg",
     id: 6,
-  },
-];
-
-export const posts: Post[] = [
-  {
-    id: 0,
-    title: "Article Title 1",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quos, et aperiam veniam possimus autem accusantium facere corporis, animi quaerat inventore mollitia blanditiis.",
-    date: "25 de abril de 2015",
-    image: "https://picsum.photos/600/400/?random",
-    path: "/blog/article-title-1",
-  },
-  {
-    id: 1,
-    title: "Article Title 2",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quos, et aperiam veniam possimus autem accusantium facere corporis, animi quaerat inventore mollitia blanditiis.",
-    date: "25 de abril de 2015",
-    image: "https://picsum.photos/600/400/?random",
-    path: "/blog/article-title-2",
-  },
-  {
-    id: 2,
-    title: "Article Title 3",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quos, et aperiam veniam possimus autem accusantium facere corporis, animi quaerat inventore mollitia blanditiis.",
-    date: "25 de abril de 2015",
-    image: "https://picsum.photos/600/400/?random",
-    path: "/blog/article-title-3",
-  },
-  {
-    id: 3,
-    title: "Article Title 4",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quos, et aperiam veniam possimus autem accusantium facere corporis, animi quaerat inventore mollitia blanditiis.",
-    date: "25 de abril de 2015",
-    image: "https://picsum.photos/600/400/?random",
-    path: "/blog/article-title-4",
   },
 ];
 

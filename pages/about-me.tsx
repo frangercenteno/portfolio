@@ -33,6 +33,8 @@ const AboutMe = () => {
                     layout="intrinsic"
                     width={64}
                     height={64}
+                    loader={({ src }) => `${src}?auto=format&q=80`}
+                    blurDataURL={`${item.imageUrl}?base64`}
                   />
                 </div>
               ))}

@@ -37,6 +37,8 @@ const Hero: FC<HeroProps> = () => {
                 height={180}
                 layout="intrinsic"
                 alt="Franger Dev"
+                loader={({ src }) => `${src}?auto=format&q=80`}
+                blurDataURL={"/preferente-logo-bl-wh_1.svg?base64"}
               />
             </a>
           </Link>

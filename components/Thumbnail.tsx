@@ -14,6 +14,8 @@ const Thumbnail: React.FC<Props> = ({ title, src, slug }: Props) => {
       alt={`Cover Image for ${title}`}
       width={1280}
       height={720}
+      loader={({ src }) => `${src}?auto=format&q=80`}
+      blurDataURL={`${src}?base64`}
     />
   );
   return (
