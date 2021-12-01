@@ -10,13 +10,14 @@ interface ProjectsProps {
 
 const Projects: FC<ProjectsProps> = ({ data }) => {
   return (
-    <Layout pageTitle="Projects">
-      <div className="py-16">
+    <Layout pageTitle="Proyectos">
+      <div className="py-20">
         <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
-          Projects
+          Proyectos
         </h1>
-        <h2 className="text-secondary-lighter text-1xl font-bold leading-none my-2">
-          Coming soon...
+        <h2 className="text-secondary-lighter text-1xl mt-2">
+          Hago proyectos para aprender nuevas cosas o simplemente para dejar
+          documentado para otros lo aprendido por mi.
         </h2>
       </div>
       <div className="shadow-md flex flex-wrap justify-between">

@@ -5,18 +5,30 @@ import { SKILLS } from "../constants";
 
 const AboutMe = () => {
   return (
-    <Layout pageTitle="About Me">
-      <div className="py-16">
+    <Layout pageTitle="Sobre mí">
+      <div className="pt-20">
         <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
-          About me
+          Sobre mí
         </h1>
       </div>
-      <p className="text-secondary-lighter text-sm mt-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, placeat
-        tempore quasi voluptate libero totam saepe commodi hic soluta accusamus
-        dolore dignissimos quidem voluptates quas ullam ipsum obcaecati sequi
-        porro!
+      <p className="text-secondary-lighter text-1xl mt-2">
+        Soy un desarrollador web que conoce par de cosas acerca de Javascript y
+        llevo unos años creando con él. Trabajo profesionalmente en el Front End
+        porque me gusta crear productos que otros puedan ver, pero siempre me
+        gusta hacer y experimentar cosas en el Back End, pienso que con ambos
+        caminos se crean grandes cosas.
       </p>
+      <p className="text-secondary-lighter text-1xl  mt-5">
+        Me apasiona el mundo digital en general, no me quedo solo con saber
+        Javascript, CSS y HTML o los frameworks y librerías que los acompañan,
+        por eso estoy en constante aprendizaje sobre otras tecnologías o
+        herramientas como Blockchain, Rust o hasta conocer Product Management.
+      </p>
+      <p className="text-secondary-lighter text-1xl  mt-5">
+        En la siguiente lista encontraras todas las herramientas que he usado o
+        uso actualmente:
+      </p>
+
       <div className="py-16">
         {SKILLS.map((skill) => (
           <div className="my-4" key={skill.id}>

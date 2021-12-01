@@ -12,7 +12,7 @@ interface ProjectsProps {
 const Projects: FC<ProjectsProps> = ({ data }) => {
   return (
     <section className="pb-16">
-      <TitleSection title="Projects" isDark />
+      <TitleSection title="Proyectos" isDark />
 
       <div className="shadow-md flex flex-wrap justify-between">
         {data.map((item) => (

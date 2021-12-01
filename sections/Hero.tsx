@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const SUMMARY =
-  "Tengo amplio conocimiento con JavaScript y frameworks como React del lado FrontEnd y Express y Node.js en el BackEnd";
+  "Se un par de cosas sobre Javascript en el Front End o Back End";
 interface HeroProps {}
 
 const Hero: FC<HeroProps> = () => {
@@ -15,15 +15,15 @@ const Hero: FC<HeroProps> = () => {
             Franger Centeno
           </h1>
           <h2 className="text-secondary-lighter text-1xl font-bold leading-none md:mt-2">
-            Front End Developer
+            Web Developer
           </h2>
           <h3 className="text-secondary-dark leading-1 mt-5">
             {SUMMARY} <br />
             <br />
             <span className="block">
-              You can read more about me{" "}
+              Puedes leer un poco más{" "}
               <Link href="/about-me">
-                <a className="text-primary-default"> about me.</a>
+                <a className="text-primary-default"> sobre mí.</a>
               </Link>
             </span>
           </h3>

@@ -17,7 +17,7 @@ interface HomeProps {
 
 const Home: FC<HomeProps> = ({ data, posts }) => {
   return (
-    <Layout pageTitle="Welcome">
+    <Layout pageTitle="Bienvenido">
       <Hero />
       <Projects data={data} />
       <Posts posts={posts} />

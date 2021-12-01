@@ -13,7 +13,7 @@ interface PostsProps {
 const Posts: FC<PostsProps> = ({ posts }) => {
   return (
     <section className="pb-16">
-      <TitleSection isDark title="Post" />
+      <TitleSection isDark title="Posts" />
       <div className="flex flex-wrap">
         {posts?.slice(0, 3).map((item, i) => (
           <CardPost key={i.toString()} {...item} />

@@ -17,8 +17,9 @@ const Posts: FC<PostsProps> = ({ posts }) => {
         <h1 className="text-primary-default text-3xl md:text-4xl font-bold leading-none">
           Posts
         </h1>
-        <h2 className="text-secondary-lighter text-1xl font-bold leading-none mt-2">
-          Coming soon...
+        <h2 className="text-secondary-lighter text-1xl mt-2">
+          Me gusta compartir conocimiento y escribir sobre temas que considero
+          interesantes o me hubiese gustado leer en otros.
         </h2>
       </div>
       {posts.map((item, i) => (

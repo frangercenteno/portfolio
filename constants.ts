@@ -7,19 +7,19 @@ export const TWITTER_USERNAME = "@frangercenteno";
 
 export const routes: Route[] = [
   {
-    name: "Home",
+    name: "Inicio",
     slug: "/",
     url: "/",
     id: 1,
   },
   {
-    name: "About me",
+    name: "Sobre mí",
     slug: "/about-me",
     url: "/about-me",
     id: 2,
   },
   {
-    name: "Projects",
+    name: "Proyectos",
     slug: "/projects",
     url: "/projects",
     id: 3,
