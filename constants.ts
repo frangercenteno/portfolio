@@ -24,12 +24,12 @@ export const routes: Route[] = [
     url: "/projects",
     id: 3,
   },
-  {
-    name: "Posts",
-    slug: "/posts",
-    url: "/posts",
-    id: 4,
-  },
+  // {
+  //   name: "Posts",
+  //   slug: "/posts",
+  //   url: "/posts",
+  //   id: 4,
+  // },
 ];
 
 export const technologies: Technology[] = [

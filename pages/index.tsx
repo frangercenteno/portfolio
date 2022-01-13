@@ -3,7 +3,7 @@ import { FC } from "react";
 import Layout from "@/components/Layout";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
-import Posts from "@/sections/Posts";
+// import Posts from "@/sections/Posts";
 
 import { BASE_API } from "../constants";
 import { GitHubData } from "@/interfaces/GitHub";
@@ -15,12 +15,12 @@ interface HomeProps {
   posts: Post[];
 }
 
-const Home: FC<HomeProps> = ({ data, posts }) => {
+const Home: FC<HomeProps> = ({ data, /*posts*/ }) => {
   return (
     <Layout pageTitle="Bienvenido">
       <Hero />
       <Projects data={data} />
-      <Posts posts={posts} />
+      {/* <Posts posts={posts} /> */}
     </Layout>
   );
 };
