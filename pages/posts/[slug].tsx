@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { GetStaticProps, GetStaticPaths } from "next";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import hljs from "highlight.js";
+import javascript from "highlight.js/lib/languages/javascript";
+
+import "highlight.js/styles/darcula.css";
+
 
 import { getPost, getAllPosts } from "@/utils/mdxUtils";
 
@@ -11,17 +16,27 @@ import Thumbnail from "../../components/Thumbnail";
 import IPost from "@/interfaces/Post";
 import { SITE_URL } from "../../constants";
 
+import { Subtitle, Paragraph } from "../../components/Blog";
+
 type Props = {
   source: MDXRemoteSerializeResult;
   frontMatter: Omit<IPost, "slug">;
 };
 
+hljs.registerLanguage("javascript", javascript);
+
 const components = {
-  SyntaxHighlighter: dynamic(() => import("react-syntax-highlighter")),
+  Subtitle,
+  Paragraph
 };
 
 const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
   const ogImage = SITE_URL + frontMatter.thumbnailUrl;
+
+  useEffect(() => {
+    hljs.configure({tabReplace: "    "});
+    hljs.highlightAll();
+  }, []);
 
   return (
     <Layout pageTitle={frontMatter.title}>
