@@ -6,7 +6,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 
-import "highlight.js/styles/darcula.css";
+import "highlight.js/styles/github-dark.css";
 
 
 import { getPost, getAllPosts } from "@/utils/mdxUtils";
@@ -34,7 +34,6 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
   const ogImage = SITE_URL + frontMatter.thumbnailUrl;
 
   useEffect(() => {
-    hljs.configure({tabReplace: "    "});
     hljs.highlightAll();
   }, []);
 
