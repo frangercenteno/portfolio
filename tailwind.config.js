@@ -3,6 +3,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./sections/**/*.{js,ts,jsx,tsx}",
+    "./posts/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: false,
   theme: {
