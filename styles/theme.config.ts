@@ -8,4 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     .header-main {
         height: 100%;
     }
+
+    article ul {
+        list-style: circle;
+        margin: 16px 0 2.5rem 0;
+        padding-inline-start: 40px;
+    }
 `;
