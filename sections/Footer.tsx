@@ -21,13 +21,12 @@ const Footer = () => {
               <Image
                 src="/img/social_media/linkedin.svg"
                 alt="linkenid"
-                className="w-full h-full"
-                layout="fill"
-                objectFit="contain"
-                objectPosition="center"
+                className="w-full h-full object-contain object-center"
                 loader={({ src }) => `${src}?auto=format&q=80`}
                 blurDataURL={"/img/social_media/linkedin.svg?base64"}
                 unoptimized
+                width={100}
+                height={100}
               />
             </a>
           </div>
@@ -41,13 +40,12 @@ const Footer = () => {
               <Image
                 src="/img/social_media/instagram.svg"
                 alt="instagram"
-                className="w-full h-full"
-                layout="fill"
-                objectFit="contain"
-                objectPosition="center"
+                className="w-full h-full object-contain object-center"
                 loader={({ src }) => `${src}?auto=format&q=80`}
                 blurDataURL={"/img/social_media/instagram.svg?base64"}
                 unoptimized
+                width={100}
+                height={100}
               />
             </a>
           </div>
@@ -61,13 +59,12 @@ const Footer = () => {
               <Image
                 src="/img/social_media/twitter.svg"
                 alt="twitter"
-                className="w-full h-full"
-                layout="fill"
-                objectFit="contain"
-                objectPosition="center"
+                className="w-full h-full object-contain object-center"
                 loader={({ src }) => `${src}?auto=format&q=80`}
                 blurDataURL={"/img/social_media/twitter.svg?base64"}
                 unoptimized
+                width={100}
+                height={100}
               />
             </a>
           </div>
@@ -81,13 +78,12 @@ const Footer = () => {
               <Image
                 src="/img/social_media/github.svg"
                 alt="github"
-                className="w-full h-full"
-                layout="fill"
-                objectFit="contain"
-                objectPosition="center"
+                className="w-full h-full object-contain object-center"
                 loader={({ src }) => `${src}?auto=format&q=80`}
                 blurDataURL={"/img/social_media/github.svg?base64"}
                 unoptimized
+                width={100}
+                height={100}
               />
             </a>
           </div>

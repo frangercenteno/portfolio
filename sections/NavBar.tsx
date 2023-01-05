@@ -49,13 +49,11 @@ const NavBar = () => {
               )}
               key={id}
             >
-              <Link href={slug}>
-                <a
-                  href={slug}
-                  className="font-bold h-full w-full block py-2 md:px-4"
-                >
-                  {name}
-                </a>
+              <Link
+                href={slug}
+                className="font-bold h-full w-full block py-2 md:px-4"
+              >
+                {name}
               </Link>
             </li>
           ))}

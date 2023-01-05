@@ -22,26 +22,23 @@ const Hero: FC<HeroProps> = () => {
             <br />
             <span className="block">
               Puedes leer un poco más{" "}
-              <Link href="/about-me">
-                <a className="text-primary-default"> sobre mí.</a>
+              <Link className="text-primary-default" href="/about-me">
+                sobre mí.
               </Link>
             </span>
           </h3>
         </div>
         <div className="hidden sm:block sm:w-2/3 sm:text-right">
-          <Link href="/">
-            <a className="cursor-pointer">
-              <Image
-                src="/preferente-logo-bl-wh_1.svg"
-                width={280}
-                height={180}
-                layout="intrinsic"
-                alt="Franger Dev"
-                loader={({ src }) => `${src}?auto=format&q=80`}
-                blurDataURL={"/preferente-logo-bl-wh_1.svg?base64"}
-                unoptimized
-              />
-            </a>
+          <Link href="/" className="cursor-pointer">
+            <Image
+              src="/preferente-logo-bl-wh_1.svg"
+              width={280}
+              height={180}
+              alt="Franger Dev"
+              loader={({ src }) => `${src}?auto=format&q=80`}
+              blurDataURL={"/preferente-logo-bl-wh_1.svg?base64"}
+              unoptimized
+            />
           </Link>
         </div>
       </div>

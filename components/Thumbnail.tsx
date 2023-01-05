@@ -23,8 +23,8 @@ const Thumbnail: FC<ThumbnailProps> = ({ title, src, slug }) => {
   return (
     <>
       {slug ? (
-        <Link href={`/posts/${slug}`}>
-          <a aria-label={title}>{image}</a>
+        <Link aria-label={title} href={`/posts/${slug}`}>
+          {image}
         </Link>
       ) : (
         image
