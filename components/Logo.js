@@ -91,7 +91,7 @@ const DarkLogo = (props) => (
 const Logo = ({ darkMode }) => {
   const isDark = darkMode === "dark";
   return (
-    <div className="flex items-center justify-center mt-2">
+    <div className="flex items-center justify-center mt-4">
       <Link href="/">{isDark ? <LightLogo /> : <DarkLogo />}</Link>
     </div>
   );
