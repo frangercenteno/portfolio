@@ -1,31 +1,101 @@
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import logoDark from "../public/preferente-logo-duo-tono_1.svg";
+import useThemeSwitcher from "../hooks/useThemeSwitcher";
 
-const MotionLink = motion(Link);
+const LightLogo = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 655.33 231.39"
+    {...props}
+    className="w-[150px] h-auto"
+  >
+    <defs>
+      <style>{".cls-1{fill:#fff}.cls-2{fill:#00fff0}"}</style>
+    </defs>
+    <title>{"preferente-logo-bl-wh_1"}</title>
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <path
+          d="M143.22 67.94a35.26 35.26 0 0 0-21.15-63.47h-41.8V108h27.18V76.2h9.67l18 31.77h31.28Zm-22.8-15.16h-12.8v-21h12.8a10.52 10.52 0 0 1 0 21ZM632.13 67.94A35.26 35.26 0 0 0 611 4.47h-41.82V108h27.19V76.2H606l18 31.77h31.28Zm-22.8-15.16h-12.8v-21h12.8a10.52 10.52 0 0 1 0 21ZM166.39 66.67l103.5 42.14V81.77l-62.81-25.52 62.81-25.58V3.63l-103.5 42.14v20.9z"
+          className="cls-1"
+        />
+        <path
+          d="m166.39 153.01 62.81 25.58-62.81 25.51v27.05l103.5-42.14v-20.9l-103.5-42.14v27.04z"
+          className="cls-2"
+        />
+        <path
+          d="M304.53 70.44V4.47H277.5v103.59h27.03v-.09h2.89l40.02-55.52v55.52h27.02V4.47h-22.44l-47.49 65.97zM490.02 107.97l71.63.09V80.79h-45.37V67.93h38.49V44.92h-38.49V31.74h45.37V4.47h-71.63v103.5z"
+          className="cls-1"
+        />
+        <path
+          d="M28.33 127.67H.38v103.72h28a51.86 51.86 0 1 0 0-103.72Zm.26 76.22h-1.71V155h1.71a24.47 24.47 0 1 1 0 48.94ZM163.79 176.03h.22v.44h-.22zM87.15 231.17l71.54.05v-27.23h-45.28v-12.86h38.49v-23.01h-38.49v-13.18h45.37v-27.27H87.15v103.5z"
+          className="cls-2"
+        />
+        <path
+          d="M27.15 71.94h27.02V44.91H27.21V31.82h45.53V4.47H.06v40.44h27.15v27H0v36.06h27.15V71.94zM438.05 67.76h17.29v11.11a28.89 28.89 0 1 1 4.57-41.58l.11-.16L476 15a55.93 55.93 0 1 0 6.67 74.68V44.92l-44.62.08Z"
+          className="cls-1"
+        />
+        <path
+          d="m277.56 231.16-.06.03h27.03v-27.04h-26.97v27.01z"
+          className="cls-2"
+        />
+      </g>
+    </g>
+  </svg>
+);
 
-const Logo = () => {
+const DarkLogo = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={395.465}
+    height={139.636}
+    viewBox="0 0 296.599 104.727"
+    className="w-[150px] h-auto"
+    {...props}
+  >
+    <defs>
+      <clipPath id="a">
+        <path d="M0 0h296.599v104.727H0Z" />
+      </clipPath>
+    </defs>
+    <g data-name="Layer 1">
+      <g clipPath="url(#a)" data-name="Layer 2">
+        <path
+          fill="#151717"
+          d="M54.5 23.889h-5.792v-9.525H54.5a4.763 4.763 0 1 1 0 9.525m10.32 6.859a15.93 15.93 0 0 0 6.387-12.77c0-8.811-7.144-15.955-15.956-15.955H36.329v46.845h12.305v-14.38h4.373l8.153 14.38h14.158ZM275.78 23.889h-5.791v-9.525h5.792a4.763 4.763 0 1 1 0 9.525m10.32 6.859a15.93 15.93 0 0 0 6.387-12.77c0-8.811-7.144-15.955-15.956-15.955H257.61v46.845h12.305v-14.38h4.373l8.153 14.38h14.158ZM75.307 30.174l46.846 19.074v-12.24l-28.429-11.55 28.43-11.576V1.642L75.306 20.715Z"
+        />
+        <path
+          fill="#71cbd1"
+          d="m75.307 69.252 28.43 11.576-28.43 11.55v12.24l46.846-19.074v-9.459L75.307 57.011Z"
+        />
+        <path
+          fill="#151717"
+          d="M137.828 31.88V2.023h-12.23v46.882h12.23v-.037h1.31l18.11-25.128v25.128h12.23V2.023h-10.154ZM221.784 48.868l32.417.037V36.563h-20.532v-5.82h17.419V20.33h-17.42v-5.966h20.533V2.022h-32.417Z"
+        />
+        <path
+          fill="#71cbd1"
+          d="M12.938 92.28h-.773V70.13h.773c6.117 0 11.075 4.958 11.075 11.074 0 6.117-4.958 11.075-11.075 11.075m-.114-34.497H.174v46.945h12.65c12.964 0 23.472-10.509 23.472-23.472 0-12.964-10.508-23.473-23.472-23.473M74.132 79.867h.099v-.198h-.099ZM39.446 104.628l32.376.023V92.323H51.33v-5.82h17.419V76.09H51.33v-5.966h20.532V57.782H39.446Z"
+        />
+        <path
+          fill="#151717"
+          d="M12.288 32.56h12.23V20.324H12.315V14.4H32.92V2.021H.027v18.303h12.287v12.222H0v16.321h12.288ZM198.262 30.667h7.824v5.028a13.018 13.018 0 0 1-7.93 2.68c-7.223 0-13.078-5.854-13.078-13.076s5.855-13.076 13.077-13.076c4.01 0 7.598 1.808 9.997 4.652l.053-.07 7.23-10.04C210.914 2.573 204.871 0 198.222 0c-13.987 0-25.326 11.338-25.326 25.325s11.34 25.325 25.326 25.325c8.265 0 15.603-3.961 20.226-10.086V20.329l-20.187.035Z"
+        />
+        <path
+          fill="#71cbd1"
+          d="m125.624 104.62-.026.015h12.23V92.399h-12.204Z"
+        />
+      </g>
+    </g>
+  </svg>
+);
+
+const Logo = ({ darkMode }) => {
+  const isDark = darkMode === "dark";
   return (
     <div className="flex items-center justify-center mt-2">
-      <MotionLink
-        className="w-16 h-16 bg-dark text-light flex items-center justify-center rounded-full text-2xl font-bold border border-solid border-transparent dark:border-light"
-        href="/"
-        whileHover={{
-          backgroundColor: [
-            [
-              "#121212",
-              "rgba(131,58,180,1)",
-              "rgba(253,29,29,1)",
-              "rgba(252,176,69,1)",
-              "rgba(131,58,180,1)",
-              "#121212",
-            ],
-          ],
-          transition: { duration: 1, repeat: Infinity },
-        }}
-      >
-        CB
-      </MotionLink>
+      <Link href="/">{isDark ? <LightLogo /> : <DarkLogo />}</Link>
     </div>
   );
 };

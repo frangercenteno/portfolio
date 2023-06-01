@@ -12,8 +12,8 @@ const FramerImage = motion(Image);
 
 const FeaturedProjects = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
-      <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
+    <article className="w-full flex items-center justify-between relative border border-solid border-primary bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8  xs:p-4">
+      <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] bg-primary dark:bg-primaryDark xs:-right-2 sm:h-[102%] xs:w-full " />
       <Link
         href={link}
         target="_blank"
@@ -53,63 +53,8 @@ const FeaturedProjects = ({ type, title, summary, img, link, github }) => {
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
           </Link>
-          <Link
-            href={link}
-            target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base"
-          >
+          <Link href={link} target="_blank" className="ml-4 primary-button">
             Visit Project
-          </Link>
-        </div>
-      </div>
-    </article>
-  );
-};
-
-const Project = ({ title, img, link, github, type }) => {
-  return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4 ">
-      <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light md:-right-2 md:w-full xs:h-[102%] xs:rounded-[1.5rem]" />
-      <Link
-        href={link}
-        target="_blank"
-        className="w-full course-pointer overflow-auto rounded-lg"
-      >
-        <FramerImage
-          whileHover={{
-            scale: 1.05,
-          }}
-          transition={{
-            duration: 0.2,
-          }}
-          src={img}
-          alt={title}
-          className="h-auto w-full"
-        />
-      </Link>
-      <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary dark:text-primaryDark font-medium text-xl lg:text-lg md:text-base">
-          {type}
-        </span>
-        <Link
-          href={link}
-          target="_blank"
-          className="hover:underline underline-offset-2"
-        >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
-            {title}
-          </h2>
-        </Link>
-        <div className="w-full mt-2 flex items-center justify-between">
-          <Link
-            href={link}
-            target="_blank"
-            className="text-lg front-semibold underline md:text-base"
-          >
-            Visit
-          </Link>
-          <Link href={github} target="_blank" className="w-8 md:w-6">
-            <GithubIcon />
           </Link>
         </div>
       </div>
@@ -135,27 +80,9 @@ const Projects = () => {
             <div className="col-span-12">
               <FeaturedProjects
                 title={"Crypto Screener Application"}
-                summary={`A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the your local currency.`}
-                link={"/"}
-                github={"/"}
-                img={project1}
-                type={"Featured Project"}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title={"Crypto Screener Application"}
-                summary={`A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the your local currency.`}
-                link={"/"}
-                github={"/"}
-                img={project1}
-                type={"Featured Project"}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title={"Crypto Screener Application"}
-                summary={`A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the your local currency.`}
+                summary={
+                  "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the your local currency."
+                }
                 link={"/"}
                 github={"/"}
                 img={project1}
@@ -167,26 +94,6 @@ const Projects = () => {
                 title={"React Portfolio Website"}
                 summary={`A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth 
                 page transitions, cool background effects, unique design and it is mobile responsive.`}
-                link={"/"}
-                github={"/"}
-                img={project1}
-                type={"Featured Project"}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title={"Crypto Screener Application"}
-                summary={`A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the your local currency.`}
-                link={"/"}
-                github={"/"}
-                img={project1}
-                type={"Featured Project"}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title={"Crypto Screener Application"}
-                summary={`A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the your local currency.`}
                 link={"/"}
                 github={"/"}
                 img={project1}

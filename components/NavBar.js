@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import {
-  DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
-  PinterestIcon,
   SunIcon,
   TwitterIcon,
   MoonIcon,
@@ -21,9 +19,9 @@ const CustomLink = ({ href, title, className = "" }) => {
       {" "}
       {title}
       <span
-        className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-[1px] inline-block bg-primary absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
           router.asPath === href ? "w-full" : "w-0"
-        } dark:bg-light`}
+        } dark:bg-primaryDark`}
       >
         &nbsp;
       </span>
@@ -114,8 +112,6 @@ const NavBar = () => {
           <CustomMotionLink Icon={TwitterIcon} href="/" />
           <CustomMotionLink Icon={GithubIcon} href="/" />
           <CustomMotionLink Icon={LinkedInIcon} href="/" />
-          <CustomMotionLink Icon={PinterestIcon} href="/" />
-          <CustomMotionLink Icon={DribbbleIcon} href="/" />
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -165,8 +161,6 @@ const NavBar = () => {
             <CustomMotionLink Icon={TwitterIcon} href="/" />
             <CustomMotionLink Icon={GithubIcon} href="/" />
             <CustomMotionLink Icon={LinkedInIcon} href="/" />
-            <CustomMotionLink Icon={PinterestIcon} href="/" />
-            <CustomMotionLink Icon={DribbbleIcon} href="/" />
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -185,7 +179,7 @@ const NavBar = () => {
       ) : null}
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
+        <Logo darkMode={mode} />
       </div>
     </header>
   );
