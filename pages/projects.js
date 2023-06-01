@@ -53,7 +53,14 @@ const FeaturedProjects = ({ type, title, summary, img, link, github }) => {
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
           </Link>
-          <Link href={link} target="_blank" className="ml-4 primary-button">
+          <Link
+            href={link}
+            target="_blank"
+            className="ml-4 flex items-center border-2 border-solid bg-primary p-2.5 px-6 text-lg font-semibold
+    capitalize text-dark hover:border-primary hover:bg-transparent 
+    dark:bg-primaryDark  dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+    md:p-2 md:px-4 md:text-base"
+          >
             Visit Project
           </Link>
         </div>

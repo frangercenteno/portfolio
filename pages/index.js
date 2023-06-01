@@ -46,7 +46,10 @@ export default function Home() {
                 <Link
                   href="/dummy.pdf"
                   target="_blank"
-                  className="primary-button"
+                  className="flex items-center border-2 border-solid bg-primary p-2.5 px-6 text-lg font-semibold
+                  capitalize text-dark hover:border-primary hover:bg-transparent 
+                  dark:bg-primaryDark  dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+                  md:p-2 md:px-4 md:text-base"
                   download={true}
                 >
                   Resume <LinkArrow className="w-6 ml-4" />
