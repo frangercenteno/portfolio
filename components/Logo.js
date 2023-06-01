@@ -1,8 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import logoDark from "../public/preferente-logo-duo-tono_1.svg";
-import useThemeSwitcher from "../hooks/useThemeSwitcher";
 
 const LightLogo = (props) => (
   <svg
