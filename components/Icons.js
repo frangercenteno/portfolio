@@ -98,7 +98,7 @@ export const SunIcon = ({ className, ...rest }) => (
     height="24"
     viewBox="0 0 24 24"
     {...rest}
-    className={`w-full h-auto ${className}`}
+    className={`w-full  ${className}`}
   >
     <g
       fill="none"
@@ -276,7 +276,7 @@ export const MoonIcon = ({ className, ...rest }) => (
     height="24"
     viewBox="0 0 24 24"
     {...rest}
-    className={`w-full h-auto ${className}`}
+    className={`w-full  ${className}`}
   >
     <rect x="0" y="0" width="24" height="24" fill="rgba(255, 255, 255, 0)" />
     <g
