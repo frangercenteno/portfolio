@@ -1,13 +1,12 @@
-import AnimatedText from "../components/AnimatedText";
-import Layout from "../components/Layout";
-import TransitionEffect from "../components/TransitionEffect";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import article1 from "../public/images/articles/create_loading_screen_in_react_js.jpg";
-import article3 from "../public/images/articles/create_modal_component_in_react_using_react_portals.png";
 import { motion, useMotionValue } from "framer-motion";
 import { useRef } from "react";
+import AnimatedText from "../components/AnimatedText";
+import Layout from "../components/Layout";
+import TransitionEffect from "../components/TransitionEffect";
+import article1 from "../public/images/articles/custom_hooks.jpg";
 
 const FramerImage = motion(Image);
 
@@ -112,37 +111,29 @@ const Articles = () => {
   return (
     <>
       <Head>
-        <title>Articles</title>
-        <meta name="description" content="Articles" />
+        <title>Articles | Franger Centeno</title>
+        <meta
+          name="description"
+          content="As a web developer based in Lisbon, I am dedicated to turning
+                ideas into innovative web applications. I have experience in
+                Startups, Marketing Agencies and as a Freelancer"
+        />
       </Head>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Words Can Change The World!"
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            text="Knowledge Is Shared!"
+            className="mb-16 !text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
-              title={
-                "Build A Custom Pagination Component In Reactjs From Scratch"
-              }
+              title={"Custom Hooks"}
               summary={
-                "Learn how to build a custom pagination component in ReactJS from scratch. Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
+                "Learn how to build a custom hooks in ReactJS from scratch. Follow this step-by-step guide to create and use your own hooks."
               }
-              time={"9 min read"}
-              link="/"
-              img={article1}
-            />
-            <FeaturedArticle
-              title={
-                "Creating Stunning Loading Screens In React: Build 3 Types Of Loading Screens"
-              }
-              summary={
-                "Learn how to create stunning loading screens in React with 3 different methods. Discover how to use React-Loading, React-Lottie & build a custom loading screen. Improve the user experience."
-              }
-              time={"10 min read"}
-              link="/"
+              time={"3 min read"}
+              link="https://medium.com/@frangercenteno/custom-hooks-958ab7163f89"
               img={article1}
             />
           </ul>
@@ -151,40 +142,10 @@ const Articles = () => {
           </h2>
           <ul>
             <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              img={article3}
-              date="March 22, 2023"
-              link="/"
-            />
-            <Article
-              title="Silky Smooth Scrolling In Reactjs: A Step-By-Step Guide For React Developers"
-              img={article3}
-              date="March 22, 2023"
-              link="/"
-            />
-            <Article
-              title="Creating An Efficient Modal Component In React Using Hooks And Portals"
-              img={article3}
-              date="March 22, 2023"
-              link="/"
-            />
-            <Article
-              title="Build A Fabulous Todo List App With React, Redux And Framer-Motion"
-              img={article3}
-              date="March 22, 2023"
-              link="/"
-            />
-            <Article
-              title="Redux Simplified: A Beginner's Guide For Web Developers"
-              img={article3}
-              date="March 22, 2023"
-              link="/"
-            />
-            <Article
-              title="What Is Higher Order Component (Hoc) In React?"
-              img={article3}
-              date="March 22, 2023"
-              link="/"
+              title="Custom Hooks"
+              img={article1}
+              date="Dec 27, 2022"
+              link="https://medium.com/@frangercenteno/custom-hooks-958ab7163f89"
             />
           </ul>
         </Layout>

@@ -1,37 +1,27 @@
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
-import LiIcon from "./LiIcon";
+import DetailMotion from "./DetailMotion";
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
   return (
-    <li
-      ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
-    >
-      <LiIcon reference={ref} />
-      <motion.div
-        initial={{ y: 50 }}
-        whileInView={{ y: 0 }}
-        transition={{ duration: 0.5, type: "spring" }}
-      >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
-          {position}&nbsp;
-          <a
-            href={companyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary capitalize dark:text-primaryDark"
-          >
-            &nbsp;{company}
-          </a>
-        </h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
-          {time} | {address}
-        </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
-      </motion.div>
-    </li>
+    <DetailMotion ref={ref}>
+      <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+        {position}&nbsp;
+        <a
+          href={companyLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary capitalize dark:text-primaryDark"
+        >
+          &nbsp;{company}
+        </a>
+      </h3>
+      <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
+        {time} | {address}
+      </span>
+      <p className="font-medium w-full md:text-sm">{work}</p>
+    </DetailMotion>
   );
 };
 
@@ -53,53 +43,33 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position={"Software Engineer"}
-            company={"Google"}
-            companyLink={"https://google.com"}
-            time={"2022-Present"}
-            address={"Mountain View, CA"}
+            position={"Front End Developer"}
+            company={"Crehana"}
+            companyLink={"https://crehana.com"}
+            time={"2020-2022"}
+            address={"Lima, PE"}
             work={
-              "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+              "Collaborated with a multidisciplinary team in the Growth team making improvements to the main landings of the company, in the authentication, ecommerce and blog pages. Also, I developed A/B tests to test new functionalities within the platform. My non-product responsibilities included contributions to our design system."
             }
           />
           <Details
-            position={"Intern"}
-            company={"Facebook"}
-            companyLink={"https://facebook.com"}
-            time={"Summer 2021"}
-            address={"Menlo Park, CA"}
+            position={"Web Developer"}
+            company={"Nodos Digita"}
+            companyLink={"https://nodos.pe"}
+            time={"2019-2020"}
+            address={"Lima, PE"}
             work={
-              "Worked on a team responsible for developing a new mobile app feature that allowed users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature."
+              "Worked with a multidisciplinary team in projects for important clients such as Pinturas Vencedor, BBVA, Real Plaza, Brein (Breca Group), Clínica AVIVA, Monumental Music Callao making landing pages, forms, and CMS"
             }
           />
           <Details
-            position={"Software Developer"}
-            company={"Amazon"}
-            companyLink={"https://amazon.com"}
-            time={"2020-2021"}
-            address={"Seattle, WA"}
+            position={"Junior Full Stack Developer"}
+            company={"Optima Marketing Systems"}
+            companyLink={"https://www.optimasystems.es/"}
+            time={"2017-2018"}
+            address={"Lima, PE - Madrid, ES"}
             work={
-              "Worked on a team responsible for developing Amazon's mobile app, including implementing new features such as product recommendations and user reviews, and optimizing the app's performance and reliability."
-            }
-          />
-          <Details
-            position={"Software Developer Intern"}
-            company={"Microsoft"}
-            companyLink={"https://microsoft.com"}
-            time={"Summer 2019"}
-            address={"Redmond, WA"}
-            work={
-              "Worked on a team responsible for developing new features for Microsoft's Windows operating system, including implementing a new user interface for a system settings panel and optimizing the performance of a core system component."
-            }
-          />
-          <Details
-            position={"Teaching Assistant"}
-            company={"MIT"}
-            companyLink={"https://mit.edu"}
-            time={"Fall 2018"}
-            address={"Massachusetts Ave, Cambridge, MA"}
-            work={
-              "Assisted in teaching a course on computer programming, held office hours to help students with assignments, and graded exams and assignments."
+              "Junior Full Stack Developer in the OPTIMA CMR project, the main project of the company in which he bases his income and in which user data is handled"
             }
           />
         </ul>

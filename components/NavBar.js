@@ -70,6 +70,7 @@ const CustomMotionLink = ({ Icon, href }) => {
 
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
+  console.log(mode);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -158,9 +159,18 @@ const NavBar = () => {
           </nav>
 
           <nav className="flex items-center justify-center flex-wrap lg:mt-2 ">
-            <CustomMotionLink Icon={TwitterIcon} href="/" />
-            <CustomMotionLink Icon={GithubIcon} href="/" />
-            <CustomMotionLink Icon={LinkedInIcon} href="/" />
+            <CustomMotionLink
+              Icon={TwitterIcon}
+              href="https://twitter.com/frangerdev"
+            />
+            <CustomMotionLink
+              Icon={GithubIcon}
+              href="https://github.com/frangercenteno"
+            />
+            <CustomMotionLink
+              Icon={LinkedInIcon}
+              href="https://www.linkedin.com/in/franger-centeno/"
+            />
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -179,7 +189,7 @@ const NavBar = () => {
       ) : null}
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo darkMode={mode} />
+        <Logo darkMode={mode} isLink />
       </div>
     </header>
   );
