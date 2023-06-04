@@ -1,9 +1,8 @@
 import Head from "next/head";
-import AnimatedText from "../components/AnimatedText";
-import Layout from "../components/Layout";
-import Experience from "../components/Experience";
-import Education from "../components/Education";
-import TransitionEffect from "../components/TransitionEffect";
+import AnimatedText from "./AnimatedText";
+import Layout from "./Layout";
+import Experience from "./Experience";
+import TransitionEffect from "./TransitionEffect";
 import Logo from "@components/Logo";
 
 const About = () => {
@@ -55,7 +54,6 @@ const About = () => {
             </div>
           </div>
           <Experience />
-          <Education />
         </Layout>
       </main>
     </>

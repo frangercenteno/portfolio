@@ -104,15 +104,23 @@ const NavBar = () => {
       <div className="w-full flex justify-between items-center lg:hidden">
         <nav className="flex items-center justify-center">
           <CustomLink href="/" title="Home" className="mr-4" />
-          <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
           <CustomLink href="/articles" title="Articles" className="ml-4" />
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap lg:mt-2 ">
-          <CustomMotionLink Icon={TwitterIcon} href="/" />
-          <CustomMotionLink Icon={GithubIcon} href="/" />
-          <CustomMotionLink Icon={LinkedInIcon} href="/" />
+          <CustomMotionLink
+            Icon={TwitterIcon}
+            href="https://twitter.com/frangerdev"
+          />
+          <CustomMotionLink
+            Icon={GithubIcon}
+            href="https://github.com/frangercenteno"
+          />
+          <CustomMotionLink
+            Icon={LinkedInIcon}
+            href="https://www.linkedin.com/in/franger-centeno/"
+          />
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -139,11 +147,6 @@ const NavBar = () => {
             <CustomMobileLink
               href="/"
               title="Home"
-              toggleHandle={handleClick}
-            />
-            <CustomMobileLink
-              href="/about"
-              title="About"
               toggleHandle={handleClick}
             />
             <CustomMobileLink
