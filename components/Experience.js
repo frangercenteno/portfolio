@@ -54,7 +54,7 @@ const Experience = () => {
           />
           <Details
             position={"Web Developer"}
-            company={"Nodos Digita"}
+            company={"Nodos Digital"}
             companyLink={"https://nodos.pe"}
             time={"2019-2020"}
             address={"Lima, PE"}
